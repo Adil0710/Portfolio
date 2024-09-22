@@ -38,7 +38,7 @@ function Intro() {
                 
             <div className=" p-4 max-w-7xl  mx-auto relative z-10 text-center w-full lg:pt-5 pt-14 md:pt-0">
             <h1 className="lg:text-7xl lg:leading-[1] md:text-4xl md:leading-[1] text-[27px] leading-[1.5] font-bold text-center bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-700 from-neutral-950 to-neutral-300 bg-opacity-50">
-                Hey, It's me Adil and I'm a<br />
+                Hey, It&apos;s me Adil and I&apos;m a<br />
                 <FlipWords words={words} />
               </h1>
               <HoverBorderGradientDemo/>

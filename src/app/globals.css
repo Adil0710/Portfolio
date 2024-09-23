@@ -35,5 +35,12 @@
 .custom-object-position {
   object-position: 50% 100%; /* Adjust the second value to move the image vertically */
 }
-
+::selection{
+  background-color: black;
+  color: white;
+}
+.dark ::selection{
+  background-color: #fff;
+  color: black;
+}
 

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { motion, MotionConfig } from "framer-motion";
 
 interface SectionHeadingProps {

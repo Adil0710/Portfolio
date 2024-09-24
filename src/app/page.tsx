@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import SectionDivider from "@/components/SectionDivider";
+import Skills from "@/components/Skills";
 import Image from "next/image";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
      <Hero/>
      <SectionDivider/>
      <About/>
+     <Skills/>
      {/* <Projects/> */}
     </main>
   );

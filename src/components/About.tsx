@@ -13,11 +13,14 @@ function About() {
     >
         <SectionHeading>About Me</SectionHeading>
 
-        <p className=' mb-3  text-gray-800 dark:text-gray-300'>
-        I'm a passionate <span className=' font-bold'>full-stack developer</span> with alomost 1 year of experience and strong foundation in building web applications using technologies like React, Node.js, and MongoDB. I have hands-on experience developing interactive, high-performance applications for companies like MountainHigh Solutions and ArrowTech Technologies, where I reduced latency and enhanced user experience. I enjoy creating efficient, user-friendly solutions and have experience in both front-end and back-end development.
+        <p className='mb-3 text-gray-800 dark:text-gray-300'>
+           I&apos;m a passionate <span className='font-bold'>full-stack developer</span> with almost 1 year of experience and a strong foundation in building web applications using technologies like React, Node.js, and MongoDB. I have hands-on experience developing interactive, high-performance applications for companies such as MountainHigh Solutions and ArrowTech Technologies, where I successfully reduced latency and enhanced user experience. I enjoy creating efficient, user-friendly solutions, and I am skilled in both front-end and back-end development.
         </p>
 
-        <p className='  text-gray-800 dark:text-gray-300'>I love sharing my knowledge through teaching and mentoring others in tech, and when I'm not coding, you can often find me enjoying video games.</p>
+        <p className='text-gray-800 dark:text-gray-300'>
+          I love sharing my knowledge through teaching and mentoring others in tech. When I&apos;m not coding, you can often find me enjoying video games.
+        </p>
+
     </motion.section>
   )
 }

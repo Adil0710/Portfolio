@@ -8,7 +8,7 @@ import { HoverBorderGradientDemo } from './HoverBorderGradientDemo';
 function Intro() {
     const words = ["Full-Stack dev.", "MERN stack dev.", "Front-End dev."];
   return (
-    <div className=' flex items-center justify-center z-10 w-full flex-col sm:mt-40 mt-14'>
+    <div className=' flex items-center justify-center z-10 w-full flex-col sm:mt-48 mt-14'>
        <motion.div
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -17,6 +17,7 @@ function Intro() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
+              viewport={{ once: true}}
               >
       <Image src={adil} alt='adil'
       priority={true}
@@ -34,6 +35,7 @@ function Intro() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
+              viewport={{ once: true}}
               >
                 
             <div className=" p-4 max-w-7xl  mx-auto relative z-10 text-center w-full lg:pt-5 pt-14 md:pt-0">

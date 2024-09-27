@@ -18,12 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`${inter.className} dark:bg-[rgba(6,6,6)]`}>
-    <ThemeProvider>
-        <Navbar/>
-        {children}
-    </ThemeProvider>
-        </body>
+      <body className={`${inter.className} dark:bg-[rgba(6,6,6)]`}>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

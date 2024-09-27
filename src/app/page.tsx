@@ -1,18 +1,22 @@
-import About from "@/components/About";
+import type { NextPage } from 'next';
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import SectionDivider from "@/components/SectionDivider";
-import Skills from "@/components/Skills";
-import Image from "next/image";
+import About from "@/components/About";
 
-export default function Home() {
+import Skills from "@/components/Skills";
+import SectionDivider from "@/components/SectionDivider";
+import CalendlyWidget from '@/components/CalendlyWidget';
+
+const Home: NextPage = () => {
   return (
     <main className="w-full flex flex-col items-center min-h-[500vh]">
-     <Hero/>
-     <SectionDivider/>
-     <About/>
-     <Skills/>
-     {/* <Projects/> */}
+       
+      <Hero />
+      <SectionDivider />
+      <About />
+      <CalendlyWidget/>
+      <Skills />
     </main>
   );
-}
+};
+
+export default Home;

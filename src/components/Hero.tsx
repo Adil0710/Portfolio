@@ -13,7 +13,7 @@ function Hero() {
     const {theme} = useTheme()
     
     return (
-       <div className=" w-full">
+       <div className=" w-full" id="home">
          {theme === 'light' ? (<AuroraBackground>
             <Intro/>
           </AuroraBackground>

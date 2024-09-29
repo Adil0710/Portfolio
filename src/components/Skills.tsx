@@ -22,7 +22,7 @@ function Skills() {
   return (
     <section className=' mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40' id='skills'>
         <SectionHeading>My Skills</SectionHeading>
-        <ul className=' flex flex-wrap justify-center gap-2 text-black/90 dark:text-white/70'>
+        <ul className=' flex flex-wrap justify-center gap-2 text-black/90 dark:text-white/75'>
             {
                 skillsData.map((skill, index) => (
                     <motion.li className=' bg-gray-100 dark:bg-white/[0.05] border border-black/[0.1] dark:border-white/[0.1] rounded-xl px-5 py-3' key={index}

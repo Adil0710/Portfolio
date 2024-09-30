@@ -8,13 +8,13 @@ import SectionDivider from "@/components/SectionDivider";
 
 const Home: NextPage = () => {
   return (
-    <main className="w-full dark:bg-black flex flex-col items-center min-h-[500vh]">
+    <main className="w-full dark:bg-black flex flex-col items-center">
        
       <Hero />
       <SectionDivider />
       <About />
       <Skills />
-
+      
     </main>
   );
 };

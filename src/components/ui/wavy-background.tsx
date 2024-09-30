@@ -1,4 +1,5 @@
 "use client";
+import { useTheme } from "@/context/themeContext";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
@@ -82,10 +83,12 @@ export const WavyBackground = ({
       ctx.closePath();
     }
   };
-
+  const { theme, toggleTheme } = useTheme();
   let animationId: number;
   const render = () => {
-    ctx.fillStyle = backgroundFill || "black";
+    console.log(theme)
+    const backgroundColor = theme === "light" ? "white" : "black";
+    ctx.fillStyle = backgroundFill || backgroundColor;
     ctx.globalAlpha = waveOpacity || 0.5;
     ctx.fillRect(0, 0, w, h);
     drawWave(5);
@@ -97,7 +100,7 @@ export const WavyBackground = ({
     return () => {
       cancelAnimationFrame(animationId);
     };
-  }, []);
+  }, [theme]);
 
   const [isSafari, setIsSafari] = useState(false);
   useEffect(() => {

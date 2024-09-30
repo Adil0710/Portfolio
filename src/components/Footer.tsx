@@ -16,26 +16,27 @@ function Footer() {
 
             <div className=' w-full'>
                 <Image src={theme === "light" ? LogoDark : Logo} alt='Logo' className=' mb-4'/>
-                <span>&copy; {currentYear} Adil Patel. All rights reserved.</span>
+                <span className=' font-medium'>&copy; {currentYear} Adil Patel. All rights reserved.</span>
             </div>
 
             <div className='flex flex-col sm:grid grid-cols-3 sm:gap-6 gap-10 w-full sm:mt-0 mt-10'>
 
                 <div className='flex flex-col col-span-2 gap-3'>
-                    <a href="" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Github</a>
-                    <a href="" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>LinkedIn</a>
-                    <a href="" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Instagram</a>
-                    <a href="" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Twitter</a>
-                    <a href="" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Threads</a>
+                    <a href="https://github.com/Adil0710" target='_blank' className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Github</a>
+                    <a href="https://www.linkedin.com/in/adil-patel-737692252/" target='_blank' className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>LinkedIn</a>
+                    <a href="https://www.instagram.com/code_with_adil/" target='_blank' className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Instagram</a>
+                    <a href="https://x.com/AdilPat21587273" target='_blank' className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Twitter</a>
+                    <a href="https://www.threads.net/@the_lonewolf_02_" target='_blank' className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Threads</a>
+                    <a href="https://steamcommunity.com/id/ambadas/" target='_blank' className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Steam</a>
                 </div>
 
                 <div className='flex flex-col gap-3'>
-                    <a href="#home" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Home</a>
-                    <a href="#about" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>About</a>
-                    <a href="#skills" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Skills</a>
-                    <a href="#projects" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Projects</a>
-                    <a href="#experience" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Experience</a>
-                    <a href="#contact" className=' font-medium hover:text-black duration-200 dark:hover:text-white'>Contact</a>
+                    <a href="#home" className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Home</a>
+                    <a href="#about" className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>About</a>
+                    <a href="#skills" className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Skills</a>
+                    <a href="#projects" className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Projects</a>
+                    <a href="#experience" className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Experience</a>
+                    <a href="#contact" className=' font-semibold hover:text-black duration-200 dark:hover:text-white'>Contact</a>
                 </div>
 
             </div>

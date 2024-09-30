@@ -1,6 +1,6 @@
-"use client"
-// components/Preloader.tsx
-import { useEffect, useRef, useState } from "react";
+"use client";
+
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { WavyBackgroundDemo } from "@/components/WavyBackgroundDemo";
 
@@ -21,9 +21,14 @@ const Preloader = ({ onLoadingComplete }: { onLoadingComplete: () => void }) => 
     timeline.to(preloader, {
       opacity: 0,
       duration: 1.5,
-      delay: 2, // Add delay for preloader visibility
+      delay: 2, // Delay for preloader visibility
       ease: "power3.out",
     });
+
+    // Cleanup GSAP timeline on component unmount
+    return () => {
+      timeline.kill();
+    };
   }, [onLoadingComplete]);
 
   return (

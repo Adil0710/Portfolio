@@ -45,3 +45,10 @@
   background-color: #fff;
   color: black;
 }
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}

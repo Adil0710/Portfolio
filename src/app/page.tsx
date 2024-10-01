@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import SectionDivider from "@/components/SectionDivider";
+import Contact from '@/components/Contact';
 
 
 
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
       <SectionDivider />
       <About />
       <Skills />
-      
+      <Contact/>
     </main>
   );
 };

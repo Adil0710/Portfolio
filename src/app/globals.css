@@ -52,3 +52,9 @@
 .block {
   display: block;
 }
+.BorderAndBg {
+  @apply  bg-gray-100 dark:bg-white/[0.05] border border-black/[0.1] dark:border-white/[0.1]
+}
+.TextClr{
+  @apply text-black/90 dark:text-white/65
+}

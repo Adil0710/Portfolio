@@ -86,7 +86,6 @@ export const WavyBackground = ({
   const { theme, toggleTheme } = useTheme();
   let animationId: number;
   const render = () => {
-    console.log(theme)
     const backgroundColor = theme === "light" ? "white" : "black";
     ctx.fillStyle = backgroundFill || backgroundColor;
     ctx.globalAlpha = waveOpacity || 0.5;

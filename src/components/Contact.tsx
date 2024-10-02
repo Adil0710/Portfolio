@@ -4,23 +4,24 @@ import SectionHeading from "./section-heading";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { sendEmail } from "../../actions/sendEmail";
 
 function Contact() {
   return (
     <motion.section
       id="contact"
-      className=" sm:mb-28 mb-20 w-[min(100%,38rem)] text-center"
+      className=" sm:mb-28 mb-20 w-[min(100%,38rem)] text-center px-5 lg:px-0 md:px-5"
       initial={{
-        opacity: 0
+        opacity: 0,
       }}
       whileInView={{
-        opacity: 1
+        opacity: 1,
       }}
       transition={{
-        duration: 1
+        duration: 1,
       }}
       viewport={{
-        once: true
+        once: true,
       }}
     >
       <SectionHeading>Contact me</SectionHeading>
@@ -35,9 +36,15 @@ function Contact() {
         or through this form.
       </p>
 
-      <form className=" mt-10 flex flex-col">
+      <form
+        className=" mt-10 flex flex-col"
+        action={async (formData) => {
+          await sendEmail(formData);
+        }}
+      >
         <input
           type="email"
+          name="senderEmail"
           required
           maxLength={500}
           placeholder="Your email"
@@ -45,8 +52,9 @@ function Contact() {
         />
         <textarea
           placeholder="Your message"
+          name="message"
           required
-          maxLength={500}
+          maxLength={5000}
           className=" text-sm TextClr BorderAndBg h-52 my-3 p-4 rounded-lg resize-none focus:outline-black/60"
         />
         <HoverBorderGradient

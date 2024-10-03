@@ -1,17 +1,15 @@
 "use client";
-import React, { useState } from "react"; // Import useState
+import React, { useState, useRef } from "react"; // Import useState and useRef
 import SectionHeading from "./section-heading";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { sendEmail } from "../../actions/sendEmail";
-import { useFormStatus } from "react-dom";
-import { div } from "framer-motion/client";
 import toast from "react-hot-toast";
 
 function Contact() {
-  const { pending } = useFormStatus(); // Check if form is pending
   const [isSubmitting, setIsSubmitting] = useState(false); // State to manage submission status
+  const formRef = useRef<HTMLFormElement>(null); // Create a ref for the form
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent default form submission
@@ -31,6 +29,11 @@ function Contact() {
 
     toast.success("Email sent successfully!"); // Show success message
     setIsSubmitting(false); // Reset submitting state
+
+    // Clear the form fields
+    if (formRef.current) {
+      formRef.current.reset(); // Reset the form
+    }
   };
 
   return (
@@ -54,7 +57,7 @@ function Contact() {
         or through this form.
       </p>
 
-      <form className="mt-10 flex flex-col" onSubmit={handleSubmit}>
+      <form className="mt-10 flex flex-col" onSubmit={handleSubmit} ref={formRef}>
         <input
           type="email"
           name="senderEmail"

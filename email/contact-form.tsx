@@ -30,9 +30,9 @@ import {
           <Hr style={styles.hr} />
           <Section style={styles.message}>
             <Img
-              src="https://devadil.vercel.app/_next/static/media/logodarks.ce211f37.svg"
+              src="https://devadil.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogodark.d12e5c20.png&w=3840&q=75"
               width="66"
-              height="22"
+              height="66"
               alt="AP"
               style={styles.img}
             />
@@ -106,7 +106,7 @@ import {
       marginBottom: "16px",
     },
     text: {
-      color: "#747474",
+      color: "#505050",
       fontWeight: 500,
       lineHeight: "1.6",
       margin: "0",

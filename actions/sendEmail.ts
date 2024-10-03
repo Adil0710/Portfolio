@@ -1,42 +1,50 @@
 "use server";
 
 import { Resend } from "resend";
-import { validateString, getErrorMessage } from "@/lib/utils";
+import { validateString } from "@/lib/utils";
 import Contact from "../email/contact-form";
 import React from "react";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("senderEmail");
-  const message = formData.get("message");
+// Define the return type for sendEmail
+interface SendEmailResponse {
+  data: any | null; // Data can be null if there's an error
+  error: string | null; // Allow error to be null
+}
 
+export const sendEmail = async (formData: FormData): Promise<SendEmailResponse> => {
+  const senderEmail = formData.get("senderEmail") as string;
+  const message = formData.get("message") as string;
+
+  // Server-side validation
   if (!validateString(senderEmail, 500)) {
-    return {
-      error: "Invalid sender email",
-    };
+    return { data: null, error: "Invalid sender email" }; // Return error for invalid email
   }
-
   if (!validateString(message, 5000)) {
-    return {
-      error: "Invalid message",
-    };
+    return { data: null, error: "Invalid message" }; // Return error for invalid message
   }
 
   try {
-    await resend.emails.send({
-      from: "Contact form<onboarding@resend.dev>",
+    const data = await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>",
       to: "padil2246@gmail.com",
       subject: "Message from contact form",
-      replyTo: senderEmail as string,
+      replyTo: senderEmail,
       react: React.createElement(Contact, {
-        message: message as string,
-        senderEmail: senderEmail as string,
+        message: message,
+        senderEmail: senderEmail,
       }),
     });
-  } catch (error: unknown) {
-    return {
-      error: getErrorMessage(error),
-    };
+
+    // Check if there's an error in the response data
+    if (data?.error) {
+      return { data: null, error: data.error.message }; // Return the error message if it exists
+    }
+
+    return { data, error: null }; // Success response
+  } catch (error: any) {
+    // Directly return the entire error response from Resend API
+    return { data: null, error: error?.message || "An unexpected error occurred." };
   }
 };

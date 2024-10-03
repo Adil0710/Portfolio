@@ -58,3 +58,9 @@
 .TextClr{
   @apply text-black/90 dark:text-white/65
 }
+.chip{
+  @apply bg-gray-200 dark:bg-white/[0.10]
+}
+.chipText{
+  @apply text-black dark:text-white
+}

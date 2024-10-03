@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@nextui-org/chip": "^2.0.33",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/theme": "^2.2.11",
     "@react-email/components": "^0.0.25",
     "@react-email/tailwind": "^0.1.0",
     "@tabler/icons-react": "^3.11.0",

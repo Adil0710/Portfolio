@@ -93,7 +93,7 @@ const config: Config = {
   	}
   },
   plugins: [addVariablesForColors,nextui(), require("tailwindcss-animate")],
-  darkMode: ["class", "class"]
+  darkMode: ["class"]
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

@@ -12,11 +12,11 @@ export function ThreeDCardDemo() {
     <div className=" mt-24 sm:grid sm:grid-cols-2 sm:gap-5 flex flex-col">
       {projectData.map((project, index) => (
         <CardContainer key={index} className="inter-var">
-          <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#050505] dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border flex flex-col -mt-32 justify-between min-h-[450px] max-h-[550px]">
+          <CardBody className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.10] dark:bg-[#050505] dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border flex flex-col -mt-32 justify-between min-h-[450px] max-h-[550px]">
             {/* Title */}
             <CardItem
               translateZ="50"
-              className="text-md font-bold text-neutral-600 dark:text-white"
+              className="text-md font-bold text-neutral-700 dark:text-white"
             >
               {project.title}
             </CardItem>
@@ -25,7 +25,7 @@ export function ThreeDCardDemo() {
             <CardItem
               as="p"
               translateZ="60"
-              className="text-neutral-500 text-xs text-left max-w-sm dark:text-neutral-300"
+              className="text-neutral-500 text-xs text-left max-w-sm leading-normal dark:text-neutral-300"
             >
               {project.description}
             </CardItem>
@@ -62,6 +62,7 @@ export function ThreeDCardDemo() {
                 <FaGithub className="text-sm" /> Code
               </CardItem>
             </div>
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px" />
           </CardBody>
         </CardContainer>
       ))}

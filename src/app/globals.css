@@ -127,3 +127,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.check {
+  background-color: red;
+}

@@ -10,7 +10,7 @@ export function HoverBorderGradientDemo() {
         as="button"
         className="dark:bg-black bg-white text-black dark:text-white "
       >
-        <a href="https://drive.google.com/file/d/1295UApbwly9bVbctVUOCqy_s1vOU1jwQ/view?usp=drive_link" target="_blank" className="flex items-center space-x-2">
+        <a href="https://drive.google.com/file/d/1o3PBo-CGQNJwsBlDclLOsaghvTK1-ONo/view?ts=66ff79fe" target="_blank" className="flex items-center space-x-2">
         <AceternityLogo />
         <span>Resume</span>
         </a>

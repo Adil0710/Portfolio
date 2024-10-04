@@ -7,6 +7,7 @@ import SectionDivider from "@/components/SectionDivider";
 import Contact from '@/components/Contact';
 import { Toaster } from 'react-hot-toast';
 import { useTheme } from '@/context/themeContext';
+import Project from '@/components/Project';
 
 
 
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Hero />
       <SectionDivider />
       <About />
+      <Project/>
       <Skills />
       <Contact/>
       <Toaster

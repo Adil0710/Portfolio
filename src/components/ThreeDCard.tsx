@@ -6,9 +6,11 @@ import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { projectData } from "@/lib/data";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 export function ThreeDCardDemo() {
   return (
+    <div className=" mb-28">
     <div className=" mt-24 sm:grid sm:grid-cols-2 sm:gap-5 flex flex-col">
       {projectData.map((project, index) => (
         <CardContainer key={index} className="inter-var">
@@ -16,7 +18,7 @@ export function ThreeDCardDemo() {
             {/* Title */}
             <CardItem
               translateZ="50"
-              className="text-md font-bold text-neutral-700 dark:text-white"
+              className="text-md font-bold text-neutral-700 dark:text-neutral-200"
             >
               {project.title}
             </CardItem>
@@ -25,7 +27,7 @@ export function ThreeDCardDemo() {
             <CardItem
               as="p"
               translateZ="60"
-              className="text-neutral-500 text-xs text-left max-w-sm leading-normal dark:text-neutral-300"
+              className="text-neutral-600 text-xs text-left max-w-sm leading-normal dark:text-neutral-400"
             >
               {project.description}
             </CardItem>
@@ -46,7 +48,7 @@ export function ThreeDCardDemo() {
               <CardItem
                 translateZ={20}
                 as={Link}
-                href="https://twitter.com/mannupaaji"
+                href={project.visit === 'no' ? project.github : project.visit}
                 target="__blank"
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
               >
@@ -55,7 +57,7 @@ export function ThreeDCardDemo() {
               <CardItem
                 translateZ={20}
                 as={Link}
-                href="https://github.com/mannupaaji"
+                href={project.github}
                 target="__blank"
                 className="px-2 py-1.5 rounded-lg bg-black dark:bg-white dark:text-black text-white flex flex-row items-center justify-center gap-1 text-xs font-bold"
               >
@@ -66,6 +68,9 @@ export function ThreeDCardDemo() {
           </CardBody>
         </CardContainer>
       ))}
+      
+    </div>
+    <Link href="/check" className=' inline-flex items-center gap-1 text-sm transition-all dark:text-white/75 duration-200 text-neutral-600 font-semibold dark:hover:text-white hover:text-black'>See more <MdKeyboardArrowDown className=' text-xl' /></Link>
     </div>
   );
 }

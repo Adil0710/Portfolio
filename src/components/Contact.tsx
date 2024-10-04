@@ -27,7 +27,7 @@ function Contact() {
       return; // Stop execution after showing error
     }
 
-    toast.success("Email sent successfully!"); // Show success message
+    toast.success("Message sent successfully!"); // Show success message
     setIsSubmitting(false); // Reset submitting state
 
     // Clear the form fields
@@ -83,8 +83,8 @@ function Contact() {
             <div className=" h-5 w-5 animate-spin rounded-full border-b-2 dark:border-white border-black"></div>
           ) : (
             <>
-              Submit{" "}
-              <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
+              Send{" "}
+              <FaPaperPlane className="text-xs opacity-70 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
             </>
           )}
         </HoverBorderGradient>

@@ -92,7 +92,7 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [addVariablesForColors,nextui(), require("tailwindcss-animate")],
+  plugins: [addVariablesForColors,nextui(), require("tailwindcss-animate"), require('tailwind-scrollbar')],
   darkMode: ["class"]
 };
 

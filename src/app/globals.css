@@ -15,9 +15,6 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-*{
-  scroll-behavior: smooth;
-}
 /* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -33,6 +30,28 @@
     text-wrap: balance;
   }
 }
+
+/* For WebKit browsers (Chrome, Safari, Edge) - Light Mode */
+*::-webkit-scrollbar {
+  width: 10px; /* Adjust scrollbar width */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent; /* Track color */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(78, 78, 78); /* Thumb color */
+  border-radius: 10px; /* Rounded corners for thumb */
+}
+
+/* For Firefox - Light Mode */
+* {
+  scrollbar-width: thin; /* Makes scrollbar thinner */
+  scrollbar-color: rgb(78, 78, 78) transparent; /* Thumb and track colors */
+  border-radius: 10px;
+}
+
 
 .custom-object-position {
   object-position: 50% 100%; /* Adjust the second value to move the image vertically */

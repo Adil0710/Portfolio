@@ -21,7 +21,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={`${inter.className} dark:bg-[rgba(0,0,0)]`}>
+      <body className={`${inter.className} dark:bg-[rgba(0,0,0)] !scroll-smooth scrollbar overflow-auto`}>
         <ThemeProvider>
           <ClientLayout>{children}</ClientLayout>
          

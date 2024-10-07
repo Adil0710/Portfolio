@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 import { useTheme } from "@/context/themeContext";
 import Project from "@/components/Project";
 import { useEffect } from "react";
-import Experience, { TimelineDemo } from "@/components/Experience";
+import Experience from "@/components/Experience";
 
 
 

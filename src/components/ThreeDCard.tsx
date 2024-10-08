@@ -10,7 +10,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 export function ThreeDCardDemo() {
   return (
-    <div className=" mb-28">
+    <div className=" mb-12">
     <div className=" mt-24 sm:grid sm:grid-cols-2 sm:gap-8 flex flex-col">
       {projectData.map((project, index) => (
         <CardContainer key={index} className="inter-var">

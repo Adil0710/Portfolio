@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div className='w-full px-6 lg:px-0 md:px-6 text-black/75 dark:text-white/65 py-10 text-sm pb-3 bg-white dark:bg-black flex justify-center items-center '>
 
-        <div className=' max-w-[53rem] border-t dark:border-t-white/20 border-t-black/20 w-full pt-10 pb-5 flex flex-col sm:flex-row items-center justify-center'>
+        <div className=' max-w-[53rem] border-t dark:border-t-white/20 border-t-black/20 w-full pt-10 pb-5 flex flex-col sm:flex-row items-center justify-center rounded-none'>
 
             <div className=' w-full'>
                 <Image src={theme === "light" ? LogoDark : Logo} alt='Logo' className=' mb-4'/>

@@ -5,6 +5,25 @@ import { BsFillPatchCheckFill, BsPatchCheckFill } from "react-icons/bs";
 export function TimelineDemo() {
   const data = [
     {
+      title: "Sept 2024 - Present",
+      content: (
+        <div>
+          <p className="text-neutral-700 dark:text-neutral-200 text-xs md:text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+            <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
+            Full-stack Developer
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
+              At Furde Infotech Pvt. Ltd. developing modern, responsive
+              websites and scalable web applications using React, Next.js,
+              TypeScript, and UI libraries like Shadcn, Aceternity UI, and Ant
+              Design.
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Feb 2024 - Jul 2024",
       content: (
         <div>
@@ -33,7 +52,11 @@ export function TimelineDemo() {
           </p>
           <div className="mb-8">
             <div className="flex gap-2 items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
-            At ArrowTech Technologies Pvt. Ltd., developed web applications with interactive and responsive design for various devices. Enhanced UX with React and libraries like GSAP, LocomotiveJS & ScrollTrigger boosting engagement by 39% and reducing bounce rate by 13%.
+              At ArrowTech Technologies Pvt. Ltd., developed web applications
+              with interactive and responsive design for various devices.
+              Enhanced UX with React and libraries like GSAP, LocomotiveJS &
+              ScrollTrigger boosting engagement by 39% and reducing bounce rate
+              by 13%.
             </div>
           </div>
         </div>
@@ -45,12 +68,12 @@ export function TimelineDemo() {
         <div>
           <p className="text-neutral-700 dark:text-neutral-200 text-xs md:text-sm font-bold flex flex-row items-center text-left w-full mb-4">
             <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
-            Bharati Vidyapeeth Deemed to Be University, Pune
+            MCA
           </p>
           <div className="mb-8">
             <div className="flex gap-2 items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
               During my MCA at Bharati Vidyapeeth, I deepened my coding skills,
-              tackling advanced concepts and real-world projects that fueled my
+              tackling advanced concepts & real-world projects that fueled my
               passion for software development.
             </div>
           </div>
@@ -78,7 +101,7 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className="w-full -mt-8">
+    <div className="w-full -mt-8 sm:mt-0">
       <Timeline data={data} />
     </div>
   );

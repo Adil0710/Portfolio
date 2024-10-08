@@ -50,6 +50,7 @@
   scrollbar-width: thin; /* Makes scrollbar thinner */
   scrollbar-color: rgb(78, 78, 78) transparent; /* Thumb and track colors */
   border-radius: 10px;
+  scroll-behavior: smooth !important;
 }
 
 

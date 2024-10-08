@@ -7,7 +7,7 @@ import Image from "next/image";
 function About() {
   return (
     <motion.section
-      className=" mb-28 max-w-[45rem] scroll-mt-52 text-center leading-8 px-5 lg:px-0 md:px-5"
+      className=" mb-24 max-w-[45rem] scroll-mt-44 text-center leading-8 px-5 lg:px-0 md:px-5"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

@@ -20,9 +20,9 @@ const Home: NextPage = () => {
       <Hero />
       <SectionDivider />
       <About />
+      <Skills />
       <Experience/>
       <Project />
-      <Skills />
       <Contact />
       <Toaster
         position="top-center"

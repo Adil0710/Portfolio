@@ -22,14 +22,14 @@ function Navbar() {
           icon: <IconBrain className="h-4 w-4 text-neutral-500 dark:text-white" />          
         },
         {
-          name: "Projects",
-          link: "#projects",
-          icon: <IconDeviceLaptop className="h-4 w-4 text-neutral-500 dark:text-white" />        
-        },
-        {
           name: "Experience",
           link: "#experience",
           icon: <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />
+        },
+        {
+          name: "Projects",
+          link: "#projects",
+          icon: <IconDeviceLaptop className="h-4 w-4 text-neutral-500 dark:text-white" />        
         },
         {
           name: "Contact",

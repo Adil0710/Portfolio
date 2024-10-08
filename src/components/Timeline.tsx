@@ -8,7 +8,7 @@ export function TimelineDemo() {
       title: "Sept 2024 - Present",
       content: (
         <div>
-          <p className="text-neutral-700 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
             <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
             Full-stack Developer
           </p>
@@ -27,7 +27,7 @@ export function TimelineDemo() {
       title: "Feb 2024 - Jul 2024",
       content: (
         <div>
-          <p className="text-neutral-700 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
             <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
             Full-stack Developer
           </p>
@@ -46,7 +46,7 @@ export function TimelineDemo() {
       title: "Feb 2024 - Jul 2024",
       content: (
         <div>
-          <p className="text-neutral-700 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
             <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
             Front-end Developer Intern
           </p>
@@ -66,7 +66,7 @@ export function TimelineDemo() {
       title: "Jul 2022 - Jul 2024",
       content: (
         <div>
-          <p className="text-neutral-700 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
             <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
             MCA
           </p>
@@ -84,7 +84,7 @@ export function TimelineDemo() {
       title: "Jul 2019 - Jul 2022",
       content: (
         <div>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">
             <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
             BCA
           </p>

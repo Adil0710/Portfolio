@@ -8,10 +8,34 @@ export function TimelineDemo() {
       title: "Feb 2024 - Jul 2024",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          <p className="text-neutral-700 dark:text-neutral-200 text-xs md:text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+            <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
+            Full-stack Developer
           </p>
-          
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
+              Developed a full-stack HR Management System using Node.js, React,
+              and MySQL at MountainHigh Solutions Pvt. Ltd. Improved latency by
+              16% and added modules for leave, attendance, and payroll, reducing
+              admin tasks by 33% and increasing employee satisfaction by 25%.
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Feb 2024 - Jul 2024",
+      content: (
+        <div>
+          <p className="text-neutral-700 dark:text-neutral-200 text-xs md:text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+            <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
+            Front-end Developer Intern
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
+            At ArrowTech Technologies Pvt. Ltd., developed web applications with interactive and responsive design for various devices. Enhanced UX with React and libraries like GSAP, LocomotiveJS & ScrollTrigger boosting engagement by 39% and reducing bounce rate by 13%.
+            </div>
+          </div>
         </div>
       ),
     },
@@ -19,15 +43,17 @@ export function TimelineDemo() {
       title: "Jul 2022 - Jul 2024",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+          <p className="text-neutral-700 dark:text-neutral-200 text-xs md:text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+            <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
+            Bharati Vidyapeeth Deemed to Be University, Pune
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
+              During my MCA at Bharati Vidyapeeth, I deepened my coding skills,
+              tackling advanced concepts and real-world projects that fueled my
+              passion for software development.
+            </div>
+          </div>
         </div>
       ),
     },
@@ -35,27 +61,18 @@ export function TimelineDemo() {
       title: "Jul 2019 - Jul 2022",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-100 text-xs md:text-sm font-medium flex flex-row text-left w-full mb-4">
-          <BsFillPatchCheckFill className="text-blue-500 mr-2"/> Bharati Vidyapeeth Deemed to be University, Pune 
+          <p className="text-neutral-700 dark:text-neutral-200 text-xs md:text-sm font-bold flex flex-row items-center text-left w-full mb-4">
+            <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
+            BCA
           </p>
+
           <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
+            <div className="flex gap-2 items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
+              My coding journey began during my BCA at Bharati Vidyapeeth, where
+              I discovered the thrill of turning ideas into reality through
+              code, sparking a passion that drives me today.
             </div>
           </div>
-         
         </div>
       ),
     },

@@ -30,7 +30,7 @@ import {
           <Hr style={styles.hr} />
           <Section style={styles.message}>
             <Img
-              src="https://devadil.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogodark.d12e5c20.png&w=3840&q=75"
+              src="https://res.cloudinary.com/dvxx69afz/image/upload/v1728466529/logodark_banbjl.png"
               width="66"
               height="66"
               alt="AP"

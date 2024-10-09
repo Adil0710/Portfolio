@@ -70,7 +70,7 @@ export function ThreeDCardDemo() {
       ))}
       
     </div>
-    <Link href="/check" className=' inline-flex items-center gap-1 text-sm transition-all dark:text-white/75 duration-200 text-neutral-600 font-semibold dark:hover:text-white hover:text-black'>See more <MdKeyboardArrowDown className=' text-xl' /></Link>
+    <Link href="/more-projects" className=' inline-flex items-center gap-1 text-sm transition-all dark:text-white/75 duration-200 text-neutral-600 font-semibold dark:hover:text-white hover:text-black'>See more <MdKeyboardArrowDown className=' text-xl' /></Link>
     </div>
   );
 }

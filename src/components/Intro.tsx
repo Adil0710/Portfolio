@@ -88,6 +88,7 @@ function Intro() {
               quality={100}
               className="sm:h-96 sm:w-96 h-60 w-60 object-cover custom-object-position rounded-full"
               layout="fixed" // You can also use layout="responsive" based on your needs
+              placeholder="blur"
             />
           </div>
         </div>

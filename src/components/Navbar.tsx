@@ -3,12 +3,15 @@
 import React from "react";
 import { FloatingNav } from "./ui/floating-navbar";
 import { IconHome, IconMessage, IconUser, IconBrain, IconDeviceLaptop, IconMail, IconBriefcase } from "@tabler/icons-react";
+import { useRouter } from "next/router";
+
 
 function Navbar() {
+  const router = useRouter()
     const navItems = [
         {
           name: "Home",
-          link: "#",
+          link: "/",
           icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
         },
         {

@@ -1,10 +1,8 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import ThemeSwitch from '@/components/ThemeSwitch';
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export const FloatingNav = ({
   navItems,
@@ -19,6 +17,7 @@ export const FloatingNav = ({
 }) => {
   const { scrollYProgress } = useScroll();
   const router = useRouter();
+  const pathname = usePathname(); // Get the current pathname
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -36,7 +35,7 @@ export const FloatingNav = ({
     // Check if the link is a hash link (internal sections)
     if (link.startsWith("#")) {
       // If on a different route, navigate to the home page and append the hash
-      if (router.pathname !== "/") {
+      if (pathname !== "/") {
         router.push(`/${link}`);
       } else {
         // Scroll to the section on the current page

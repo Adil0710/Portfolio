@@ -22,6 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} dark:bg-[rgba(0,0,0)]`}>
+      <div className="fixed inset-x-0 top-0 isolate z-[100] h-32">
+        <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[6px]"></div>
+        <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[12px]"></div>
+        <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[3px]"></div>
+        <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[2px]"></div>
+        <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[1px]"></div>
+      </div>
         <ThemeProvider>
           <ClientLayout>{children}</ClientLayout>
          

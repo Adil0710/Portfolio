@@ -85,7 +85,7 @@
   @apply text-black dark:text-white
 }
 .cardShadow{
-  box-shadow: 0px 4px 4px 0px #45454540;
+  box-shadow: 0px 2px 2px 0px #45454540;
   @apply duration-200 cursor-grab
 }
 .cardShadow:hover{

@@ -86,6 +86,10 @@
 }
 .cardShadow{
   box-shadow: 0px 4px 4px 0px #45454540;
+  @apply duration-200 cursor-grab
+}
+.cardShadow:hover{
+  box-shadow: 0px 2px 2px 0px rgba(16, 185, 129, 0.3);
 }
 @layer base {
   :root {

@@ -4,7 +4,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export function HoverBorderGradientDemo() {
   return (
-    <div className=" lg:m-32 m-20 md:m-24 flex justify-center text-center">
+    <div className=" lg:m-28 m-20 md:m-24 flex justify-center text-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"

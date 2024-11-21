@@ -84,6 +84,9 @@
 .chipText{
   @apply text-black dark:text-white
 }
+.cardShadow{
+  box-shadow: 0px 4px 4px 0px #45454540;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

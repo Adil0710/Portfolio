@@ -64,14 +64,15 @@ function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
-          className="TextClr text-sm h-14 px-4 rounded-lg border BorderAndBg dark:focus:black/10 dark:outline:black/10 focus:outline-black/60"
+          className="TextClr text-sm h-14 px-4 rounded-lg border BorderAndBg focus:outline focus:outline-black/60 focus:outline-[0.4px] ring-neutral-500 dark:ring-neutral-300 focus-visible:ring-[0.4px] dark:focus:outline-black/10"
+
         />
         <textarea
           placeholder="Your message"
           name="message"
           required
           maxLength={5000}
-          className="text-sm TextClr BorderAndBg h-52 my-3 p-4 rounded-lg resize-none focus:outline-black/60"
+          className="text-sm TextClr BorderAndBg h-52 my-3 p-4 rounded-lg resize-none focus:outline focus:outline-black/60 focus:outline-[0.4px] ring-neutral-500 dark:ring-neutral-300 focus-visible:ring-[0.4px] dark:focus:outline-black/10"
         />
         <HoverBorderGradient
           containerClassName="rounded-full"

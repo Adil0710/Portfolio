@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} dark:bg-[rgba(0,0,0)]`}>
         <ThemeProvider>
           <ClientLayout>
-            <div className="fixed inset-x-0 top-0 isolate z-[20] h-20">
+            <div className="fixed inset-x-0 top-0 isolate z-[99] h-20">
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[1px]"></div>
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[2px]"></div>
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[3px]"></div>
@@ -29,7 +29,7 @@ export default function RootLayout({
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[12px]"></div>
             </div>
             {children}
-            <div className="fixed inset-x-0 bottom-0 isolate z-[10] h-16">
+            <div className="fixed inset-x-0 bottom-0 isolate z-[99] h-16">
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]"></div>
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]"></div>
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[3px]"></div>

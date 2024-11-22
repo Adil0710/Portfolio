@@ -3,7 +3,18 @@ import memories from '../../public/memories.png'
 import freescribe from '../../public/freescribe.png'
 import pinterest from '../../public/pinterest.png'
 import { image } from '@nextui-org/theme';
+// data/links.js
+import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { BsThreads } from 'react-icons/bs';
+import { ComponentType, SVGProps } from 'react';
+import steam from '@/components/steam';
 
+interface LinkSocial {
+  href: string;
+  label: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  outline?: boolean;
+}
 export const skillsData = [
   "HTML",
   "CSS",
@@ -63,3 +74,14 @@ export const projectData = [
     image: inward
   },
 ] as const;
+
+
+
+export const linksSocial:LinkSocial[] = [
+  { href: 'https://github.com/Adil0710', label: 'GitHub', icon: Github, outline: false },
+  { href: 'https://www.linkedin.com/in/adil-patel-737692252/', label: 'LinkedIn', icon: Linkedin, outline: false },
+  { href: 'https://x.com/AdilPat21587273', label: 'Twitter', icon: Twitter, outline: false },
+  { href: 'https://www.instagram.com/code_with_adil/', label: 'Instagram', icon: Instagram, outline: false },
+  { href: 'https://www.threads.net/@the_lonewolf_02_', label: 'Threads', icon: BsThreads, outline: false },
+  { href: 'https://steamcommunity.com/id/ambadas/', label: 'Steam', icon: steam, outline: false },
+];

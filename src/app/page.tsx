@@ -11,17 +11,16 @@ import Project from "@/components/Project";
 import { useEffect } from "react";
 import Experience from "@/components/Experience";
 
-
-
 const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <main className="w-full dark:bg-black flex flex-col items-center scrollbar">
+      
       <Hero />
       <SectionDivider />
       <About />
       <Skills />
-      <Experience/>
+      <Experience />
       <Project />
       <Contact />
       <Toaster

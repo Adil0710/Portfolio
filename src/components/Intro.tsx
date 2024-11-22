@@ -4,7 +4,6 @@ import { FlipWords } from "./ui/flip-words";
 import adil from "../../public/adil2.jpg";
 import Image from "next/image";
 import { HoverBorderGradientDemo } from "./HoverBorderGradientDemo";
-import { IconX } from "@tabler/icons-react";
 
 function Intro() {
   const [isModalOpen, setIsModalOpen] = useState(false); // Control modal visibility
@@ -75,10 +74,9 @@ function Intro() {
       {/* Modal (red div) */}
       {isModalOpen && (
         <div
-          className={`fixed inset-0 w-full h-full bg- z-[999999] bg-[#1f1f1f] bg-opacity-75 duration-300 transition-opacity flex items-center justify-center`}
+          className={`fixed inset-0 w-full h-full z-[999999] bg-[#1f1f1f] bg-opacity-75 duration-300 transition-opacity flex items-center justify-center`}
           onClick={toggleModal} // Close modal on click (optional)
         >
-          <IconX className=" absolute right-5 top-5 text-white cursor-pointer " size={32} onClick={toggleModal}/>
           <div className="">
             <Image
               src={adil}

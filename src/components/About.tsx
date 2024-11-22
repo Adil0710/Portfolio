@@ -17,13 +17,13 @@ function About() {
 
       <p className="mb-3 TextClr">
         I&apos;m a passionate{" "}
-        <span className="rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold shadow-sm">
+        <span className="rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold cardShadow">
           {" "}
           full-stack developer
         </span>{" "}
         with almost 1 year of experience and a strong foundation in building web
         applications using technologies like{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/react-js-icon.png"
             alt="React Icon"
@@ -33,7 +33,7 @@ function About() {
           />
           React
         </span>{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png"
             alt="React Icon"
@@ -43,7 +43,7 @@ function About() {
           />
           Next.js,
         </span>{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/node-js-icon.png"
             alt="React Icon"
@@ -54,7 +54,7 @@ function About() {
           Node.js,
         </span>{" "}
         and{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mongodb-icon.png"
             alt="React Icon"
@@ -69,11 +69,11 @@ function About() {
         Technologies, where I successfully reduced latency and enhanced user
         experience. I enjoy creating efficient, user-friendly solutions, and I
         am skilled in both{" "}
-        <span className="rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold shadow-sm">
+        <span className="rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm">
           front-end
         </span>{" "}
         and{" "}
-        <span className="rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold shadow-sm">
+        <span className="rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm">
           back-end
         </span>{" "}
         development.

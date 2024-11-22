@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { projectData } from "@/lib/data";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { ArrowUpRight } from "lucide-react";
 
 export function ThreeDCardDemo() {
   return (
@@ -50,9 +51,9 @@ export function ThreeDCardDemo() {
                 as={Link}
                 href={project.visit === 'no' ? project.github : project.visit}
                 target="__blank"
-                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                className="px-2 py-1.5 flex gap-1 justify-center items-center rounded-xl text-xs font-normal dark:text-white"
               >
-                Visit now →
+                Visit now <ArrowUpRight size={15}/>
               </CardItem>
               <CardItem
                 translateZ={20}

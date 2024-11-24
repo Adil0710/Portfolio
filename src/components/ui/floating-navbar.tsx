@@ -20,7 +20,7 @@ export const FloatingNav = ({
   const pathname = usePathname(); // Get the current pathname
   const [visible, setVisible] = useState(true);
 
-  u`{
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       let direction = current - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0.0) {

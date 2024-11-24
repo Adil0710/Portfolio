@@ -16,8 +16,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const themeScript = `
+  (function() {
+    const localTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (localTheme === 'dark' || (!localTheme && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+`;
   return (
     <html lang="en">
+       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className={`${inter.className} dark:bg-[rgba(0,0,0)]`}>
         <ThemeProvider>
           <ClientLayout>

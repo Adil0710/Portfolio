@@ -154,3 +154,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Light mode (default) */
+.preloader {
+  background-color: #f0f0f0;
+  color: #1b2120;
+}
+
+/* Dark mode */
+ .dark .preloader {
+  background-color: #080808;
+  color: #e4ded7;
+}

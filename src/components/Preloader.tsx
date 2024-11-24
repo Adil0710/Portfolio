@@ -3,11 +3,8 @@ import gsap from "gsap";
 import { useTheme } from "@/context/themeContext";
 
 const PreLoader: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
-  
+  const { theme } = useTheme();
     useEffect(() => {
-   
-
         const tl = gsap.timeline({
             onComplete: () => {
                 document.dispatchEvent(new Event("preloaderComplete"));
@@ -90,10 +87,11 @@ const PreLoader: React.FC = () => {
 
     return (
         <div
-            className={`${theme === "light" ? "bg-[#f0f0f0] text-[#1b2120]" : "dark:bg-[#080808] dark:text-[#e4ded7]"} preloader gap-[5px] overflow-hidden text-[14px]   sm:gap-[10px] sm:text-[16px] md:text-[18px] lg:text-[20px]`}
+        className={` preloader gap-[5px] overflow-hidden text-[14px]   sm:gap-[10px] sm:text-[16px] md:text-[18px] lg:text-[20px]`}
             style={{
                 height: "100vh",
                 width: "100%",
+               
                 position: "fixed",
                 bottom: 0,
                 left: 0,

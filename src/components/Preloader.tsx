@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useTheme } from "@/context/themeContext";
@@ -22,7 +23,7 @@ const PreLoader: React.FC = () => {
                     {
                         y: 70,
                         skewY: 10,
-                        duration: 1.5,
+                        duration: 1,
                         delay: 1,
                         stagger: 0.4,
                         ease: "Power3.easeOut",
@@ -49,7 +50,7 @@ const PreLoader: React.FC = () => {
                     ease: "Power3.easeInOut",
                 })
                 .from(".sub", {
-                    duration: 1,
+                    duration: 0.8,
                     opacity: 0,
                     y: 80,
                     ease: "Expo.easeOut",
@@ -57,12 +58,12 @@ const PreLoader: React.FC = () => {
                 .to(
                     ".preloader",
                     {
-                        duration: 1.5,
+                        duration: 0.8,
                         height: "0vh",
                         ease: "Power3.easeOut",
                         onComplete: mobileLanding,
                     },
-                    "-=2"
+                    "-=1"
                 )
                 .to(".preloader", {
                     duration: 0,
@@ -73,10 +74,10 @@ const PreLoader: React.FC = () => {
         const mobileLanding = () => {
             if (window.innerWidth < 763) {
                 tl.from(".landing__main2", {
-                    duration: 1,
+                    duration: 0.1,
                     delay: 0,
                     opacity: 0,
-                    y: 80,
+                    y: 60,
                     ease: "Expo.easeOut",
                 });
             }
@@ -96,7 +97,7 @@ const PreLoader: React.FC = () => {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                zIndex: 55,
+                zIndex: 999,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",

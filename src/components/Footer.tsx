@@ -1,11 +1,8 @@
 'use client';
-
-import Image from 'next/image';
 import React from 'react';
-import Logo from '../../public/logosvg.svg';
-import LogoDark from '../../public/logodarksvg.svg';
 import { useTheme } from '@/context/themeContext';
 import { SocialText } from './SocialText';
+import Logo from './Logo';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,11 +13,7 @@ function Footer() {
       <div className="max-w-[53rem] border-t dark:border-t-white/20 border-t-black/20 w-full pt-8 pb-11 flex flex-col sm:flex-row items-center justify-between rounded-none gap-8">
         {/* Logo and Copyright */}
         <div className="w-full flex flex-col sm:items-start">
-          <Image
-            src={theme === 'light' ? LogoDark : Logo}
-            alt="Logo"
-            className="mb-4"
-          />
+         <Logo className='mb-4'/>
           <span className="font-medium sm:text-left">
             &copy; {currentYear} Adil Patel. All rights reserved.
           </span>

@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useTheme } from "@/context/themeContext";
+import Logo from "./Logo";
 
 const PreLoader: React.FC = () => {
   const { theme } = useTheme();
@@ -110,7 +111,8 @@ const PreLoader: React.FC = () => {
                     height: "60px",
                 }}
             >
-                <span>Adil Patel</span>
+                <span><Logo className=" w-8 h-8"/></span>
+                <span> Adil Patel</span>
                 <span> / </span>
                 <span className="flex items-center justify-center gap-3">Full Stack Developer</span>
                 <div className="sub hidden"></div>

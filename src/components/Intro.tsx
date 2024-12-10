@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
 import adil from "../../public/adil2.jpg";
 import Image from "next/image";
@@ -38,6 +38,7 @@ function Intro() {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
+        className="relative"
       >
         <Image
           onClick={toggleModal}
@@ -49,6 +50,29 @@ function Intro() {
           quality={95}
           className="sm:h-40 sm:w-40 cursor-pointer h-36 w-36 rounded-full object-cover custom-object-position border-[0.30rem] z-10 border-white sm:mb-10"
         />
+        <motion.span
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          whileHover={{ rotate: 10 }} // Rotate the hand by 6 degrees on hover
+          transition={{
+            opacity: {
+              type: "spring",
+              stiffness: 150,
+              duration: 0.8,
+              delay: 0.5,
+            },
+            scale: {
+              type: "spring",
+              stiffness: 150,
+              duration: 0.8,
+              delay: 0.5,
+            },
+            
+          }}
+          className="absolute right-2 bottom-12 text-4xl cursor-pointer "
+        >
+          👋
+        </motion.span>
       </motion.div>
 
       <motion.div
@@ -74,7 +98,7 @@ function Intro() {
       {/* Modal (red div) */}
       {isModalOpen && (
         <div
-          className={`fixed inset-0 w-full h-full z-[999999] bg-[#1f1f1f] bg-opacity-75 duration-300 transition-opacity flex items-center justify-center`}
+          className={`fixed inset-0 w-full h-full z-[99999] bg-[#1f1f1f] bg-opacity-75 duration-300 transition-opacity flex items-center justify-center`}
           onClick={toggleModal} // Close modal on click (optional)
         >
           <div className="">

@@ -69,7 +69,7 @@ function Intro() {
             },
             
           }}
-          className="absolute right-2 bottom-12 text-4xl cursor-pointer "
+          className="absolute sm:right-2 sm:bottom-12 text-3xl bottom-1 right-2 sm:text-4xl cursor-pointer "
         >
           👋
         </motion.span>

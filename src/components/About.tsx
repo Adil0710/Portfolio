@@ -16,10 +16,10 @@ function About() {
       <SectionHeading>About Me</SectionHeading>
 
       <p className="mb-3 TextClr">
-        I&apos;m a passionate{" "}
+        I&apos;m a dedicated {" "}
         <span className="rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold cardShadow">
           {" "}
-          full-stack developer
+          Full-stack developer
         </span>{" "}
         with almost 1 year of experience and a strong foundation in building web
         applications using technologies like{" "}
@@ -70,11 +70,11 @@ function About() {
         experience. I enjoy creating efficient, user-friendly solutions, and I
         am skilled in both{" "}
         <span className="rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm">
-          front-end
+          Front-end
         </span>{" "}
         and{" "}
         <span className="rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm">
-          back-end
+          Back-end
         </span>{" "}
         development.
       </p>

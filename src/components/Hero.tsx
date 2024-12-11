@@ -1,5 +1,5 @@
 "use client";
- 
+
 import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "./ui/aurora-background";
@@ -10,10 +10,21 @@ import { Spotlight } from "./ui/Spotlight";
 import Intro from "./Intro";
 
 function Hero() {
-    const {theme} = useTheme()
-    
-    return (
-       <div className=" w-full" id="home">
+  const { theme } = useTheme();
+
+  return (
+    <div className=" w-full" id="home">
+      <AuroraBackground>
+        <Intro />
+      </AuroraBackground>
+    </div>
+  );
+}
+
+export default Hero;
+
+{
+  /* <div className=" w-full" id="home">
          {theme === 'light' ? (<AuroraBackground>
             <Intro/>
           </AuroraBackground>
@@ -30,8 +41,5 @@ function Hero() {
             />
             <Intro/>
           </div>)}
-       </div>
-      );
+       </div> */
 }
-
-export default Hero

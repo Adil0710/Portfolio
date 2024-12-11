@@ -1,13 +1,13 @@
-import inward from '../../public/inward.png'
-import memories from '../../public/memories.png'
-import freescribe from '../../public/freescribe.png'
-import pinterest from '../../public/pinterest.png'
-import { image } from '@nextui-org/theme';
+import inward from "../../public/inward.png";
+import memories from "../../public/memories.png";
+import freescribe from "../../public/freescribe.png";
+import pinterest from "../../public/pinterest.png";
+import { image } from "@nextui-org/theme";
 // data/links.js
-import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
-import { BsThreads } from 'react-icons/bs';
-import { ComponentType, SVGProps } from 'react';
-import steam from '@/components/steam';
+import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { BsThreads } from "react-icons/bs";
+import { ComponentType, SVGProps } from "react";
+import steam from "@/components/steam";
 
 interface LinkSocial {
   href: string;
@@ -39,49 +39,92 @@ export const skillsData = [
   "GitHub",
 ] as const;
 
-
 export const projectData = [
   {
     title: "Memories",
     description:
-      "Developed a fullstack web application built with the MERN stack using RESTful APIs for managing notes. Features include user authentication with JWT, CRUD operations for notes, and note downloads in text format. The app incorporates modern UI/UX with React.js, Tailwind CSS, Ant Design, GSAP, ScrollTrigger, Locomotive.js, and React Router for routing.",
+      "Built a MERN stack web app for managing notes with JWT authentication, CRUD operations, note downloads, and a modern UI/UX using React, Tailwind CSS, Ant Design, and advanced animations.",
     visit: "https://memories-note-app.vercel.app/",
     github: "https://github.com/Adil0710/Memories-a-note-app",
-    image: memories
+    image: memories,
+    tech: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind",
+      "Locomotive.js",
+      "GSAP",
+      "Ant Design",
+    ],
   },
   {
     title: "FreeScribe",
-    description:
-      `Developed a web app built with React.js where user can record or upload MP3 file for real-time transcription and translation it various languages utilizing web workers to run machine learning models efficiently in the browser. The app provides convienient options to copy transcribed or translated text or download it in text format.`,
+    description: `Developed a React.js web app for real-time MP3 transcription and translation using web workers for efficient in-browser ML. Features include text copying and download options.`,
     visit: "https://freescribe.vercel.app/",
     github: "https://github.com/Adil0710/FreeScribe",
-    image: freescribe
+    image: freescribe,
+    tech: ["React.js", "Tailwind", "Machine Learning", "Web Workers"],
   },
   {
     title: "Pinterest Clone",
     description:
-      "Developed a full-stack web application using Node.js, Express.js, MongoDB and EJS. Web application featuring secure user authentication with Passport.js, profile management, post creation, feed for discovering content & post deletion for user control.",
+      "Built a full-stack web app with Node.js, Express.js, MongoDB, & EJS, featuring Passport.js authentication, profile management, feed, post creation, & deletion.",
     visit: "https://pinterest-clone-jyqc.onrender.com/",
     github: "https://github.com/Adil0710/Pinterest-Clone",
-    image: pinterest
+    image: pinterest,
+    tech: ["EJS", "Node.js", "Express.js",  "MongoDB", "Passport.js", "Multer"],
   },
   {
     title: "Inward Outward System",
     description:
-      "Developed a desktop app for the college to efficiently track the sent & received letters Using SAP Crystal Report. A single application providing a centralized solution for managing essential letter related-activities.",
+      "Created a desktop app for efficient letter tracking with SAP Crystal Reports, offering a centralized solution for managing sent and received correspondence.",
     visit: "no",
     github: "https://github.com/Adil0710/Inward-Outward-System",
-    image: inward
+    image: inward,
+    tech: [
+      "C#",
+      "MS SQL Server",
+      "SAP Crystal Report",
+      "Visual Studio"
+    ],
   },
 ] as const;
 
-
-
-export const linksSocial:LinkSocial[] = [
-  { href: 'https://github.com/Adil0710', label: 'GitHub', icon: Github, outline: false },
-  { href: 'https://www.linkedin.com/in/adil-patel-737692252/', label: 'LinkedIn', icon: Linkedin, outline: false },
-  { href: 'https://x.com/AdilPat21587273', label: 'Twitter', icon: Twitter, outline: false },
-  { href: 'https://www.instagram.com/code_with_adil/', label: 'Instagram', icon: Instagram, outline: false },
-  { href: 'https://www.threads.net/@the_lonewolf_02_', label: 'Threads', icon: BsThreads, outline: false },
-  { href: 'https://steamcommunity.com/id/ambadas/', label: 'Steam', icon: steam, outline: false },
+export const linksSocial: LinkSocial[] = [
+  {
+    href: "https://github.com/Adil0710",
+    label: "GitHub",
+    icon: Github,
+    outline: false,
+  },
+  {
+    href: "https://www.linkedin.com/in/adil-patel-737692252/",
+    label: "LinkedIn",
+    icon: Linkedin,
+    outline: false,
+  },
+  {
+    href: "https://x.com/AdilPat21587273",
+    label: "Twitter",
+    icon: Twitter,
+    outline: false,
+  },
+  {
+    href: "https://www.instagram.com/code_with_adil/",
+    label: "Instagram",
+    icon: Instagram,
+    outline: false,
+  },
+  {
+    href: "https://www.threads.net/@the_lonewolf_02_",
+    label: "Threads",
+    icon: BsThreads,
+    outline: false,
+  },
+  {
+    href: "https://steamcommunity.com/id/ambadas/",
+    label: "Steam",
+    icon: steam,
+    outline: false,
+  },
 ];

@@ -64,6 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <head>
+       <meta name="google-site-verification" content="RiVqt457WkYvXlAs4yq0Md3zcIEsyw8zWaiF5djt0zI" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={`${inter.className} dark:bg-[rgba(0,0,0)]`}>

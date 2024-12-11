@@ -7,7 +7,7 @@ import ClientLayout from "@/components/ClientLayout"; // Import client wrapper
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Adil Patel | Fullstack Developer Portfolio",
+  title: "Adil Patel | Fullstack Developer",
   description:
     "Explore the portfolio of Adil Patel, a dedicated full-stack developer skilled in building robust web applications. Get in touch for collaborations.",
     keywords: [
@@ -25,7 +25,7 @@ export const metadata = {
       icon: "/favicon.ico",
     },      
   openGraph: {
-    title: "Adil Patel | Fullstack Developer Portfolio",
+    title: "Adil Patel | Fullstack Developer",
     description:
       "Explore the portfolio of Adil Patel, a dedicated full-stack developer skilled in building robust web applications.",
     url: "https://yourportfolio.vercel.app",
@@ -43,7 +43,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adil Patel | Fullstack Developer Portfolio",
+    title: "Adil Patel | Fullstack Developer",
     description:
       "Explore the portfolio of Adil Patel, a passionate full-stack developer skilled in building robust web applications.",
     images: ["/adil1.jpg"],

@@ -7,8 +7,44 @@ import ClientLayout from "@/components/ClientLayout"; // Import client wrapper
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Adil | Portfolio",
-  description: "Developed by Adil Patel (Fullstack Developer)",
+  title: "Adil Patel | Fullstack Developer Portfolio",
+  description:
+    "Explore the portfolio of Adil Patel, a passionate full-stack developer skilled in building robust web applications. Get in touch for collaborations.",
+    keywords: [
+      "Adil Patel",
+      "Fullstack Developer",
+      "Web Developer Portfolio",
+      "Next.js Portfolio",
+      "JavaScript Developer",
+      "MERN Stack Developer"
+    ],  
+    icons: {
+      icon: "/favicon.ico",
+    },      
+  openGraph: {
+    title: "Adil Patel | Fullstack Developer Portfolio",
+    description:
+      "Explore the portfolio of Adil Patel, a passionate full-stack developer skilled in building robust web applications.",
+    url: "https://yourportfolio.vercel.app",
+    siteName: "Adil Patel Portfolio",
+    images: [
+      {
+        url: "/path/to/image.jpg",
+        width: 800,
+        height: 600,
+        alt: "Adil Patel Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adil Patel | Fullstack Developer Portfolio",
+    description:
+      "Explore the portfolio of Adil Patel, a passionate full-stack developer skilled in building robust web applications.",
+    images: ["/path/to/image.jpg"],
+  },
 };
 
 export default function RootLayout({

@@ -41,28 +41,27 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(78, 78, 78); /* Thumb color */
+  background-color: rgb(160, 160, 160); /* Thumb color */
   border-radius: 10px; /* Rounded corners for thumb */
 }
 
 /* For Firefox - Light Mode */
 * {
   scrollbar-width: thin; /* Makes scrollbar thinner */
-  scrollbar-color: rgb(78, 78, 78) transparent; /* Thumb and track colors */
+  scrollbar-color: rgb(160, 160, 160) transparent; /* Thumb and track colors */
 
   scroll-behavior: smooth !important;
 }
 
-
 .custom-object-position {
   object-position: 50% 100%; /* Adjust the second value to move the image vertically */
 }
-::selection{
-  background-color: rgba(0, 0, 0, 0.667);
+::selection {
+  background-color: rgba(0, 0, 0, 0.993);
   color: white;
 }
-.dark ::selection{
-  background-color: rgba(255, 255, 255, 0.667);
+.dark ::selection {
+  background-color: rgba(255, 255, 255, 0.993);
   color: black;
 }
 .hidden {
@@ -73,22 +72,22 @@
   display: block;
 }
 .BorderAndBg {
-  @apply  bg-gray-100 dark:bg-white/[0.05] border border-black/[0.1] dark:border-white/[0.1]
+  @apply bg-gray-100 dark:bg-white/[0.05] border border-black/[0.1] dark:border-white/[0.1];
 }
-.TextClr{
-  @apply text-black/90 dark:text-white/65
+.TextClr {
+  @apply text-black/90 dark:text-white/65;
 }
-.chip{
-  @apply bg-gray-200 dark:bg-white/[0.10]
+.chip {
+  @apply bg-gray-200 dark:bg-white/[0.10];
 }
-.chipText{
-  @apply text-black dark:text-white
+.chipText {
+  @apply text-black dark:text-white;
 }
-.cardShadow{
+.cardShadow {
   box-shadow: 0px 2px 2px 0px #45454540;
-  @apply duration-200 cursor-grab
+  @apply duration-200 cursor-grab;
 }
-.cardShadow:hover{
+.cardShadow:hover {
   box-shadow: 0px 2px 2px 0px rgba(16, 185, 129, 0.3);
 }
 @layer base {
@@ -162,8 +161,7 @@
 }
 
 /* Dark mode */
- .dark .preloader {
+.dark .preloader {
   background-color: #080808;
   color: #e4ded7;
 }
-

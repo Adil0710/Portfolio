@@ -14,7 +14,7 @@ import Experience from "@/components/Experience";
 const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <main className="w-full dark:bg-black flex flex-col items-center scrollbar">
+    <main className=" max-w-screen dark:bg-black flex flex-col items-center">
       
       <Hero />
       <SectionDivider />

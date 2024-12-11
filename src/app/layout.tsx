@@ -9,9 +9,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Adil Patel | Fullstack Developer Portfolio",
   description:
-    "Explore the portfolio of Adil Patel, a passionate full-stack developer skilled in building robust web applications. Get in touch for collaborations.",
+    "Explore the portfolio of Adil Patel, a dedicated full-stack developer skilled in building robust web applications. Get in touch for collaborations.",
     keywords: [
       "Adil Patel",
+      "Adil Patel Portfolio",
+      "Adil",
+      "Adil Portfolio",
       "Fullstack Developer",
       "Web Developer Portfolio",
       "Next.js Portfolio",
@@ -24,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: "Adil Patel | Fullstack Developer Portfolio",
     description:
-      "Explore the portfolio of Adil Patel, a passionate full-stack developer skilled in building robust web applications.",
+      "Explore the portfolio of Adil Patel, a dedicated full-stack developer skilled in building robust web applications.",
     url: "https://yourportfolio.vercel.app",
     siteName: "Adil Patel Portfolio",
     images: [

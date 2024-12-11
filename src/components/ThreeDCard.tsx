@@ -46,7 +46,7 @@ export function ThreeDCardDemo() {
                 ))}
               </div>
               {/* Image */}
-              <CardItem translateZ="100" className="w-full mt-4">
+              <CardItem translateZ="100" className="w-full mt-5">
                 <Image
                   src={project.image}
                   height="1000"

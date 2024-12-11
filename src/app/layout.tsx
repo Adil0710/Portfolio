@@ -38,7 +38,7 @@ export const metadata = {
         alt: "Adil Patel Portfolio Preview",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {

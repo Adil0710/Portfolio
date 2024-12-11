@@ -15,8 +15,8 @@ export function TimelineDemo() {
           <div className="mb-8">
             <div className="flex gap-2 items-center leading-normal text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
               At Furde Infotech Pvt. Ltd. developing modern, responsive
-              websites and scalable web applications using React, Next.js,
-              TypeScript, and UI libraries like Shadcn, Aceternity UI, and Ant
+              websites and scalable web applications using React.js, Next.js, Node.js,
+              TypeScript, and UI libraries like Shadcn, Aceternity UI and Ant
               Design.
             </div>
           </div>
@@ -33,7 +33,7 @@ export function TimelineDemo() {
           </p>
           <div className="mb-8">
             <div className="flex gap-2 leading-normal items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
-              Developed a full-stack HR Management System using Node.js, React,
+              Developed a Full-stack HR Management System using Node.js, React,
               and MySQL at MountainHigh Solutions Pvt. Ltd. Improved latency by
               16% and added modules for leave, attendance, and payroll, reducing
               admin tasks by 33% and increasing employee satisfaction by 25%.
@@ -54,7 +54,7 @@ export function TimelineDemo() {
             <div className="flex gap-2 leading-normal items-center text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
               At ArrowTech Technologies Pvt. Ltd., developed web applications
               with interactive and responsive design for various devices.
-              Enhanced UX with React and libraries like GSAP, LocomotiveJS &
+              Enhanced UX with React and libraries like GSAP, Locomotive.js &
               ScrollTrigger boosting engagement by 39% and reducing bounce rate
               by 13%.
             </div>

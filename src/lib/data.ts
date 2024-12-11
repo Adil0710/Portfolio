@@ -23,20 +23,15 @@ export const skillsData = [
   "Next.js",
   "Node.js",
   "Php",
-  "Git",
-  "Tailwind",
+  "C#",
   "MongoDB",
   "MySQL",
   "Redux",
-  "Zustand",
-  "Java (basic)",
-  "Python",
-  "C#",
-  "Django",
+  "Git",
+  "Tailwind",
   "Framer Motion",
   "Locomotive.js",
   "GSAP",
-  "GitHub",
 ] as const;
 
 export const projectData = [
@@ -68,7 +63,7 @@ export const projectData = [
   {
     title: "Pinterest Clone",
     description:
-      "Built a full-stack web app with Node.js, Express.js, MongoDB, & EJS, featuring Passport.js authentication, profile management, feed, post creation, & deletion.",
+      "Built a full-stack web app with Node.js, Express.js, MongoDB & EJS, featuring Passport.js authentication, profile management, feed, post creation & deletion.",
     visit: "https://pinterest-clone-jyqc.onrender.com/",
     github: "https://github.com/Adil0710/Pinterest-Clone",
     image: pinterest,

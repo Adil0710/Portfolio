@@ -33,13 +33,13 @@ export function ThreeDCardDemo() {
                 {project.description}
               </CardItem>
 
-              <div className="mt-3 flex flex-row flex-wrap gap-2">
+              <div className="mt-4 flex flex-row flex-wrap gap-2">
                 {project.tech.map((techno, index) => (
                   <CardItem
                     key={index}
                     as="span"
                     translateZ="80"
-                    className="block border-neutral-600 dark:border-neutral-400 border rounded-full py-0.5 px-2 text-neutral-600 text-xs text-left dark:text-neutral-400"
+                    className="block bg-neutral-700 dark:bg-neutral-300 rounded-full py-0.5 px-2 text-neutral-200 text-[10px] leading-normal tracking-wide text-left dark:text-black"
                   >
                     {techno}
                   </CardItem>

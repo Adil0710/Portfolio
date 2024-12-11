@@ -32,7 +32,7 @@ export const metadata = {
     siteName: "Adil Patel Portfolio",
     images: [
       {
-        url: "/path/to/image.jpg",
+        url: "/adil1.jpg",
         width: 800,
         height: 600,
         alt: "Adil Patel Portfolio Preview",
@@ -46,7 +46,7 @@ export const metadata = {
     title: "Adil Patel | Fullstack Developer Portfolio",
     description:
       "Explore the portfolio of Adil Patel, a passionate full-stack developer skilled in building robust web applications.",
-    images: ["/path/to/image.jpg"],
+    images: ["/adil1.jpg"],
   },
 };
 

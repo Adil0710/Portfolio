@@ -14,8 +14,8 @@ export function TimelineDemo() {
           </p>
           <div className="mb-8">
             <div className="flex gap-2 items-center leading-normal text-left text-neutral-600 font-medium dark:text-neutral-400 text-xs md:text-sm">
-              At Furde Infotech Pvt. Ltd. developing modern, responsive
-              websites and scalable web applications using React.js, Next.js, Node.js,
+              At Furde Infotech Pvt. Ltd. developing modern, responsive websites
+              and scalable web applications using React.js, Next.js, Node.js,
               TypeScript, and UI libraries like Shadcn, Aceternity UI and Ant
               Design.
             </div>
@@ -43,7 +43,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Feb 2024 - Jul 2024",
+      title: "Aug 2023 - Jan 2024",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm font-bold flex flex-row items-center text-left w-full mb-4">

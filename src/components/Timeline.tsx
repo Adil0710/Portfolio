@@ -55,7 +55,7 @@ export function TimelineDemo() {
               At ArrowTech Technologies Pvt. Ltd., developed web applications
               with interactive and responsive design for various devices.
               Enhanced UX with React and libraries like GSAP, Locomotive.js &
-              ScrollTrigger boosting engagement by 39% and reducing bounce rate
+              ScrollTrigger boosting engagement by 38% and reducing bounce rate
               by 13%.
             </div>
           </div>

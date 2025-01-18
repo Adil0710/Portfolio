@@ -4,11 +4,11 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export function HoverBorderGradientDemo() {
   return (
-    <div className=" lg:m-24 m-20 md:m-24 flex justify-center text-center">
+    <div className=" flex text-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
-        className="dark:bg-black bg-white text-black dark:text-white "
+        className="dark:bg-black bg-white text-black dark:text-white py-1 md:text-sm text-xs"
       >
         <a href="https://drive.google.com/file/d/1o3PBo-CGQNJwsBlDclLOsaghvTK1-ONo/view?usp=drive_link" target="_blank" className="flex items-center space-x-2">
         <AceternityLogo />

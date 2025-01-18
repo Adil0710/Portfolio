@@ -3,27 +3,26 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import BlurFade from "./ui/blur-fade";
 
 function About() {
   return (
-    <motion.section
-      className=" mb-24 max-w-[45rem] scroll-mt-44 text-center leading-8 px-5 lg:px-0 md:px-5"
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+    <section
+      className="mt-10 max-w-[45.3rem] z-20 scroll-mt-44 leading-8 px-5 lg:px-0 md:px-5"
       id="about"
     >
+      <BlurFade delay={0.04 * 3}>
       <SectionHeading>About Me</SectionHeading>
-
-      <p className="mb-3 TextClr">
+      </BlurFade>
+      <BlurFade delay={0.04 * 4}>
+      <p className="text-left TextClr mt-5">
         I&apos;m a dedicated {" "}
-        <span className="rounded-lg py-0.5 chip chipText px-2 border border-transparent text-sm font-semibold cardShadow">
+        <span className="font-semibold underline chipText">
           {" "}
           Full-stack developer
         </span>{" "}
-        with almost 1 year of experience and a strong foundation in building web
-        applications using technologies like{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        with nearly a year of experience building interactive, high-performance web applications using{" "}
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/react-js-icon.png"
             alt="React Icon"
@@ -31,9 +30,9 @@ function About() {
             width={16}
             height={16}
           />
-          React
+          React,
         </span>{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png"
             alt="React Icon"
@@ -43,7 +42,7 @@ function About() {
           />
           Next.js,
         </span>{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/node-js-icon.png"
             alt="React Icon"
@@ -51,10 +50,10 @@ function About() {
             width={16}
             height={16}
           />
-          Node.js,
+          Node.js
         </span>{" "}
         and{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm h-6">
+        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mongodb-icon.png"
             alt="React Icon"
@@ -64,27 +63,19 @@ function About() {
           />
           MongoDB.
         </span>{" "}
-        I have hands-on experience developing interactive, high-performance
-        applications for companies such as MountainHigh Solutions and ArrowTech
-        Technologies, where I successfully reduced latency and enhanced user
-        experience. I enjoy creating efficient, user-friendly solutions, and I
-        am skilled in both{" "}
-        <span className="rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm">
+        I specialize in creating efficient, user-friendly solutions and have expertise in both{" "}
+        <span className="font-semibold underline chipText">
           Front-end
         </span>{" "}
         and{" "}
-        <span className="rounded-lg py-0.5 chip chipText cardShadow px-2 border border-transparent text-sm font-semibold shadow-sm">
+        <span className="font-semibold underline chipText">
           Back-end
         </span>{" "}
-        development.
+        development. I enjoy sharing my knowledge through teaching and mentoring others in tech. When I'm not coding, I love playing video games.
       </p>
-
-      <p className="TextClr">
-        I love sharing my knowledge through teaching and mentoring others in
-        tech. When I&apos;m not coding, you can often find me enjoying video
-        games.
-      </p>
-    </motion.section>
+      </BlurFade>
+      
+    </section>
   );
 }
 

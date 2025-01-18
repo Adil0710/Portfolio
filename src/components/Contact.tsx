@@ -39,14 +39,14 @@ function Contact() {
   return (
     <motion.section
       id="contact"
-      className="sm:mb-20 mb-20 w-[min(100%,38rem)] scroll-mt-16 text-center px-5 lg:px-0 md:px-5"
+      className=" mt-12 w-[min(100%,43.5rem)] scroll-mt-16 px-5 lg:px-0 md:px-5"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       <SectionHeading>Contact me</SectionHeading>
-      <p className="TextClr text-sm -mt-5">
+      <p className="TextClr text-sm">
         Please contact me directly at{" "}
         <a
           href="mailto:Padil2246@gmail.com"

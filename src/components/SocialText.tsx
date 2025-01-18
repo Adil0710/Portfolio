@@ -29,7 +29,7 @@ export function LinkText({ className, href, children, icon: Icon, outline }:Link
           </div>
           <div className="flex items-center text-sm font-medium transition-all group body-secondary group-hover:opacity-20 group-hover:blur-lg sm:h-7 blur-0 grayscale-0">
             {outline ? (
-              <Icon className="w-6 h-6 stroke-[1.5px] transition text-neutral-700 group-hover:body-secondary dark:group-hover:text-outline-300" />
+              <Icon className="w-5 h-5 stroke-[1.5px] transition group-hover:body-secondary dark:group-hover:text-outline-300" />
             ) : (
               <Icon className="flex-none w-6 h-6 transition " />
             )}

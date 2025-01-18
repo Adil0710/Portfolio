@@ -56,17 +56,17 @@ export const FloatingNav = ({
       <motion.div
         initial={{
           opacity: 1,
-          y: -100,
+          y: 100,
         }}
         animate={{
-          y: visible ? 0 : -100,
+          y: visible ? 0 : 100,
           opacity: visible ? 1 : 0,
         }}
         transition={{
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-lg z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4",
+          "flex max-w-fit fixed sm:bottom-8 bottom-5 inset-x-0 mx-auto border rounded-full dark:bg-neutral-950 bg-white z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
           className
         )}
       >

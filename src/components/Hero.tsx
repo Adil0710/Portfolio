@@ -14,9 +14,9 @@ function Hero() {
 
   return (
     <div className=" w-full" id="home">
-      <AuroraBackground>
+      {/* <AuroraBackground> */}
         <Intro />
-      </AuroraBackground>
+      {/* </AuroraBackground> */}
     </div>
   );
 }

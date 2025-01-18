@@ -10,6 +10,7 @@ import { useTheme } from "@/context/themeContext";
 import Project from "@/components/Project";
 import { useEffect } from "react";
 import Experience from "@/components/Experience";
+import  Education  from "@/components/Education";
 
 const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
@@ -17,10 +18,10 @@ const Home: NextPage = () => {
     <main className=" max-w-screen overflow-x-hidden dark:bg-black flex flex-col items-center">
       
       <Hero />
-      <SectionDivider />
       <About />
-      <Skills />
       <Experience />
+      <Education/>
+      <Skills />
       <Project />
       <Contact />
       <Toaster

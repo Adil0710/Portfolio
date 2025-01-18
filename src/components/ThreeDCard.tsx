@@ -11,11 +11,11 @@ import { ArrowUpRight } from "lucide-react";
 
 export function ThreeDCardDemo() {
   return (
-    <div className=" mb-12">
-      <div className=" mt-24 sm:grid sm:grid-cols-2 sm:gap-8 flex flex-col">
+    <div className="relative text-center">
+      <div className=" sm:mt-20 mt-14 sm:grid sm:grid-cols-2 sm:gap-x-4 flex flex-col">
         {projectData.map((project, index) => (
           <CardContainer key={index} className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.10] dark:bg-[#050505] dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border flex flex-col sm:-mt-32 -mt-24 justify-between min-h-[450px] max-h-[550px]">
+            <CardBody className="bg-white relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.10] dark:bg-[#050505] dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border flex flex-col sm:-mt-32 -mt-24 justify-between min-h-[450px] max-h-[550px]">
               {/* Title */}
               <CardItem
                 translateZ="50"
@@ -39,7 +39,7 @@ export function ThreeDCardDemo() {
                     key={index}
                     as="span"
                     translateZ="80"
-                    className="block bg-neutral-700 dark:bg-neutral-300 rounded-full py-0.5 px-2 text-neutral-200 text-[10.5px] leading-4 tracking-wide text-left dark:text-black"
+                    className="block bg-gray-100 dark:bg-neutral-800 rounded-full py-0.5 px-2 text-neutral-600 text-[10.5px] leading-4 tracking-wide text-left dark:text-neutral-400"
                   >
                     {techno}
                   </CardItem>
@@ -84,7 +84,7 @@ export function ThreeDCardDemo() {
       </div>
       <Link
         href="/more-projects"
-        className=" inline-flex items-center gap-1 text-sm transition-all dark:text-white/75 duration-200 text-neutral-600 font-semibold dark:hover:text-white hover:text-black"
+        className=" inline-flex absolute left-1/2 -translate-x-1/2 bottom-5 items-center gap-1 text-sm transition-all dark:text-white/75 duration-200 text-neutral-600 font-semibold dark:hover:text-white hover:text-black"
       >
         See more <MdKeyboardArrowDown className=" text-xl" />
       </Link>

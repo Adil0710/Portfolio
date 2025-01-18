@@ -2,12 +2,14 @@ import inward from "../../public/inward.png";
 import memories from "../../public/memories.png";
 import freescribe from "../../public/freescribe.png";
 import pinterest from "../../public/pinterest.png";
-import { image } from "@nextui-org/theme";
+import { divider, image } from "@nextui-org/theme";
 // data/links.js
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
+
 import { BsThreads } from "react-icons/bs";
 import { ComponentType, SVGProps } from "react";
 import steam from "@/components/steam";
+import X from "@/components/X";
 
 interface LinkSocial {
   href: string;
@@ -15,30 +17,32 @@ interface LinkSocial {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   outline?: boolean;
 }
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Php",
-  "C#",
-  "MongoDB",
-  "MySQL",
-  "Redux",
-  "Git",
-  "Tailwind",
-  "Framer Motion",
-  "Locomotive.js",
-  "GSAP",
-] as const;
+
+
+// export const skillsData = [
+//   "HTML",
+//   "CSS",
+//   "JavaScript",
+//   "React",
+//   "Next.js",
+//   "Node.js",
+//   "Php",
+//   "C#",
+//   "MongoDB",
+//   "MySQL",
+//   "Redux",
+//   "Git",
+//   "Tailwind",
+//   "Framer Motion",
+//   "Locomotive.js",
+//   "GSAP",
+// ] as const;
 
 export const projectData = [
   {
     title: "Memories",
     description:
-      "Built a MERN stack web app for managing notes with JWT authentication, CRUD operations, note downloads, and a modern UI/UX using React, Tailwind CSS, Ant Design, and advanced animations.",
+      "Built a MERN stack web app for managing notes with JWT authentication, CRUD operations, note downloads, and a modern UI/UX using React, Tailwind CSS, AntD, and advanced animations.",
     visit: "https://memories-note-app.vercel.app/",
     github: "https://github.com/Adil0710/Memories-a-note-app",
     image: memories,
@@ -101,8 +105,8 @@ export const linksSocial: LinkSocial[] = [
   {
     href: "https://x.com/AdilPat21587273",
     label: "Twitter",
-    icon: Twitter,
-    outline: false,
+    icon: X,
+    outline: true,
   },
   {
     href: "https://www.instagram.com/code_with_adil/",
@@ -123,3 +127,5 @@ export const linksSocial: LinkSocial[] = [
     outline: false,
   },
 ];
+
+

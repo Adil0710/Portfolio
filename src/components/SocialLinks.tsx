@@ -10,19 +10,21 @@ interface SocialLinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   outline?: boolean;
+  href: string;
 }
 
 function SocialLink({
   icon: Icon,
   outline = false,
+  href,
   ...props
 }: SocialLinkProps) {
   return (
-    <Link className="p-1 -m-1 group" {...props} href="">
+    <Link className="p-1 -m-1 group flex" {...props} href={href}>
       {outline ? (
-        <Icon className="w-6 h-6 stroke-[1px] transition text-neutral-900 group-hover:text-neutral-900 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
+        <Icon className="md:w-5 md:h-5 w-4 h-4 stroke-[1px] transition text-neutral-900 group-hover:text-neutral-900 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
       ) : (
-        <Icon className="w-6 h-6 transition fill-neutral-900 group-hover:fill-neutral-900 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+        <Icon className="md:w-6 md:h-6 w-5 h-5 transition-all text-neutral-900 group-hover:text-neutral-900 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
       )}
     </Link>
   );
@@ -30,26 +32,13 @@ function SocialLink({
 
 export function SocialLinks() {
   return (
-    <div className="flex items-center justify-start gap-6 mt-6">
-      {linksSocial.map((link, index) => (
+    <div className="flex items-center justify-start md:gap-8 gap-4">
+      {linksSocial.slice(0,3).map((link, index) => (
         <div className="relative group" key={index}>
           {/* Hover arrow animation */}
           <div className="transition-all translate-y-5 opacity-0 group-hover:translate-y-3 group-hover:opacity-100">
             <div className="relative flex items-center group">
-              <svg
-                className="absolute w-4 h-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 6.75L20.25 9.75M20.25 9.75L8.25 21.75M20.25 9.75H8.25L3.75 15.75"
-                />
-              </svg>
+              <ArrowUpRight className="absolute w-5 h-5 transition-all dark:text-white opacity-0 group-hover:translate-x-1 group-hover:opacity-100" />
             </div>
           </div>
           {/* Social Icon */}

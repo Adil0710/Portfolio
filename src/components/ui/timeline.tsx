@@ -93,7 +93,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {item.title}
                   <ChevronRightIcon
                     className={cn(
-                      "size-5 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                      "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
                       expandedItems[index] ? "rotate-90 opacity-1" : "rotate-0"
                     )}
                   />
@@ -127,18 +127,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               className="relative pl-16 pr-2 md:pl-4 w-full"
               onClick={(e) => handleClick(index)}
             >
-              <h3 className="md:hidden block text-xl mt-3 mb-2 text-left font-bold">
-                {item.title}
+              <h3 className="md:hidden flex flex-row items-center gap-2 text-xl mt-3 mb-2 text-left font-bold">
+                {item.title}{" "}
+                <ChevronRightIcon
+                  className={cn(
+                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                    expandedItems[index] ? "rotate-90" : "rotate-0"
+                  )}
+                />
               </h3>
               <div className=" flex flex-col  w-full md:text-sm text-xs gap-1 mb-0 mt-1.5">
                 <p className=" flex md:hidden flex-row items-center">
-                  {item.company}{" "}
-                  <ChevronRightIcon
-                    className={cn(
-                      "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                      expandedItems[index] ? "rotate-90" : "rotate-0"
-                    )}
-                  />
+                  {item.company}
                 </p>
                 <div className=" md:hidden block pl-6">
                   <p>{item.duration}</p>

@@ -71,7 +71,7 @@ function About() {
         <span className="font-semibold underline chipText">
           Back-end
         </span>{" "}
-        development. I enjoy sharing my knowledge through teaching and mentoring others in tech. When I'm not coding, I love playing video games.
+        development. I enjoy sharing my knowledge through teaching and mentoring others in tech. When I&apos;m not coding, I love playing video games.
       </p>
       </BlurFade>
       

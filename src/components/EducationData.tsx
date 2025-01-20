@@ -18,7 +18,7 @@ export function EducationData() {
       ),
       duration: (
         <p className="text-neutral-500 font-normal md:text-sm">
-          Jul 2019 - Jul 2022
+          Jul 2022 - Jul 2024
         </p>
       ),
       content: (

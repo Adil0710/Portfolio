@@ -77,7 +77,7 @@ function Contact() {
         <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"
-          className="group dark:bg-black bg-white text-black dark:text-white w-[8rem] flex items-center justify-center gap-2 group text-sm"
+          className="group dark:bg-black bg-white text-black dark:text-white w-[6rem] flex items-center justify-center gap-2 group py-1 md:text-sm text-xs"
           disabled={isSubmitting} // Disable when form is pending or submitting
         >
           {isSubmitting ? (

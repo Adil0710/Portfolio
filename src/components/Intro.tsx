@@ -94,6 +94,7 @@ function Intro() {
               width={192}
               height={192}
               quality={95}
+              placeholder="blur"
               className="sm:h-40 sm:w-40 cursor-pointer h-32 w-32 rounded-full object-cover custom-object-position z-10 border-neutral-200 border"
             />
             </BlurFade>

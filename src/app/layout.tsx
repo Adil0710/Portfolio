@@ -28,7 +28,7 @@ export const metadata = {
     title: "Adil Patel | Fullstack Developer",
     description:
       "Explore the portfolio of Adil Patel, a dedicated full-stack developer skilled in building robust web applications.",
-    url: "https://yourportfolio.vercel.app",
+    url: "https://devadil.vercel.app",
     siteName: "Adil Patel Portfolio",
     images: [
       {

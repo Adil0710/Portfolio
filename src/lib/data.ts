@@ -2,6 +2,7 @@ import inward from "../../public/inward.png";
 import memories from "../../public/memories.png";
 import freescribe from "../../public/freescribe.png";
 import pinterest from "../../public/pinterest.png";
+import profilecraft from "../../public/profilecraft.png";
 import { divider, image } from "@nextui-org/theme";
 // data/links.js
 import { Github, Linkedin, Instagram } from "lucide-react";
@@ -17,7 +18,6 @@ interface LinkSocial {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   outline?: boolean;
 }
-
 
 // export const skillsData = [
 //   "HTML",
@@ -39,6 +39,24 @@ interface LinkSocial {
 // ] as const;
 
 export const projectData = [
+  {
+    title: "Profilecraft",
+    description:
+      "Built a full-stack app with OTP and Google OAuth, enabling shareable profiles. Designed a responsive Bento-style UI with smooth animations for a modern experience.",
+    visit: "https://profilecraft.vercel.app/",
+    github: "https://github.com/Adil0710/ProfileCraft",
+    image: profilecraft,
+    tech: [
+      "Next.js",
+      "Typescript",
+      "React.js",
+      "Nextauth.js",
+      "MongoDB",
+      "Tailwind",
+
+      "Shadcn",
+    ],
+  },
   {
     title: "Memories",
     description:
@@ -71,22 +89,22 @@ export const projectData = [
     visit: "https://pinterest-clone-jyqc.onrender.com/",
     github: "https://github.com/Adil0710/Pinterest-Clone",
     image: pinterest,
-    tech: ["EJS", "Node.js", "Express.js",  "MongoDB", "Passport.js", "Multer"],
+    tech: ["EJS", "Node.js", "Express.js", "MongoDB", "Passport.js", "Multer"],
   },
-  {
-    title: "Inward Outward System",
-    description:
-      "Created a desktop app for efficient letter tracking with SAP Crystal Reports, offering a centralized solution for managing sent and received correspondence.",
-    visit: "no",
-    github: "https://github.com/Adil0710/Inward-Outward-System",
-    image: inward,
-    tech: [
-      "C#",
-      "MS SQL Server",
-      "SAP Crystal Report",
-      "Visual Studio"
-    ],
-  },
+  // {
+  //   title: "Inward Outward System",
+  //   description:
+  //     "Created a desktop app for efficient letter tracking with SAP Crystal Reports, offering a centralized solution for managing sent and received correspondence.",
+  //   visit: "no",
+  //   github: "https://github.com/Adil0710/Inward-Outward-System",
+  //   image: inward,
+  //   tech: [
+  //     "C#",
+  //     "MS SQL Server",
+  //     "SAP Crystal Report",
+  //     "Visual Studio"
+  //   ],
+  // },
 ] as const;
 
 export const linksSocial: LinkSocial[] = [
@@ -127,5 +145,3 @@ export const linksSocial: LinkSocial[] = [
     outline: false,
   },
 ];
-
-

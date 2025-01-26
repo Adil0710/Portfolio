@@ -60,7 +60,7 @@ export const projectData = [
   {
     title: "Memories",
     description:
-      "Built a MERN stack web app for managing notes with JWT authentication, CRUD operations, note downloads, and a modern UI/UX using React, Tailwind CSS, AntD, and advanced animations.",
+      "Built a MERN stack web app for managing notes with JWT authentication, CRUD operations, note downloads and a modern UI/UX using React, Tailwind, AntD, and advanced animations.",
     visit: "https://memories-note-app.vercel.app/",
     github: "https://github.com/Adil0710/Memories-a-note-app",
     image: memories,

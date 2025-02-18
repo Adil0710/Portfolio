@@ -1,21 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
 import React from "react";
-import { AuroraBackground } from "./ui/aurora-background";
-import { cn } from "@/lib/utils";
 
-import { useTheme } from "@/context/themeContext";
-import { Spotlight } from "./ui/Spotlight";
+
+
 import Intro from "./Intro";
 
 function Hero() {
-  const { theme } = useTheme();
+
 
   return (
     <div className=" w-full" id="home">
       {/* <AuroraBackground> */}
-        <Intro />
+      <Intro />
       {/* </AuroraBackground> */}
     </div>
   );

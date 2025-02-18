@@ -27,10 +27,13 @@ export function WorkExperience() {
         <div>
           <div className="">
             <div className="flex gap-2 items-center leading-normal text-left text-neutral-600 font-normal dark:text-neutral-400 text-xs md:text-sm">
-              At Furde Infotech Pvt. Ltd. developing modern, responsive websites
-              and scalable web applications using React.js, Next.js, Node.js,
-              TypeScript, and UI libraries like Shadcn, Aceternity UI and Ant
-              Design.
+              At Furde Infotech Pvt. Ltd., developed modern, responsive websites
+              and applications with admin panel dashboards and job boards,
+              improving UI/UX by 22%. Built scalable web apps using React.js,
+              Next.js, Node.js, TypeScript, and UI libraries like Shadcn and
+              Aceternity UI, integrating MongoDB for better data management,
+              which reduced admin tasks by 30% and boosted user engagement by
+              14%.
             </div>
           </div>
         </div>
@@ -77,7 +80,9 @@ export function WorkExperience() {
         </div>
       ),
       duration: (
-        <p className="text-neutral-500 font-normal md:text-sm">Aug 2023 - Jan 2024</p>
+        <p className="text-neutral-500 font-normal md:text-sm">
+          Aug 2023 - Jan 2024
+        </p>
       ),
       content: (
         <div>

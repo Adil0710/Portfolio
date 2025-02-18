@@ -29,10 +29,10 @@ function Skills() {
     >
       <SectionHeading>My Skills</SectionHeading>
       <div className=" mt-10">
-        <ul className=" flex flex-wrap justify-center sm:gap-2 gap-2.5 text-black/90 dark:text-white/75">
+        <ul className=" flex flex-wrap justify-center gap-2.5 text-black/90 dark:text-white/75">
           {skills.map((skill, index) => (
             <motion.li
-              className=" BorderAndBg rounded-xl min-w-20 max-w-20 sm:min-w-24 sm:max-w-24 px-5 py-2 flex flex-col gap-2 cursor-pointer items-center group"
+              className="relative BorderAndBg rounded-xl min-w-20 max-w-20 sm:min-w-28 sm:max-w-28 px-5 py-3 flex flex-col gap-2 cursor-pointer items-center group"
               key={index}
               variants={fadeInAnimationVariants}
               initial="initial"
@@ -46,6 +46,8 @@ function Skills() {
                 {skill.icon}
               </div>
               <p className=" font-medium text-xs">{skill.name}</p>
+              <span className=" absolute inset-x-0 -bottom-px mx-auto h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent w-3/4"></span>
+              <span className=" absolute inset-x-0 opacity-0 dark:group-hover:opacity-100 transition-opacity duration-300 -bottom-px mx-auto h-[3px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent w-full blur-sm"></span>
             </motion.li>
           ))}
         </ul>

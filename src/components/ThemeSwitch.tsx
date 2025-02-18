@@ -18,7 +18,7 @@ const ThemeSwitch = () => {
           <MoonIcon className="h-[1rem] w-[1rem] rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
         )}
       </span>
-      <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px" />
+      <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r transition-all from-transparent via-cyan-500 to-transparent h-px" />
     </button>
   );
 };

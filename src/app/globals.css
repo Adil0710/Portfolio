@@ -72,7 +72,7 @@
   display: block;
 }
 .BorderAndBg {
-  @apply bg-gray-50 dark:bg-neutral-900 hover:bg-gray-100 dark:hover:bg-neutral-800  border;
+  @apply bg-gray-50 dark:bg-neutral-900 hover:bg-gray-100 dark:hover:bg-neutral-800  border duration-300 transition-background;
 }
 .TextClr {
   @apply  dark:text-white/65 leading-7 max-w-full text-pretty font-sans text-sm text-muted-foreground;

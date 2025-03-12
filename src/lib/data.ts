@@ -91,20 +91,20 @@ export const projectData = [
     image: pinterest,
     tech: ["EJS", "Node.js", "Express.js", "MongoDB", "Passport.js", "Multer"],
   },
-  // {
-  //   title: "Inward Outward System",
-  //   description:
-  //     "Created a desktop app for efficient letter tracking with SAP Crystal Reports, offering a centralized solution for managing sent and received correspondence.",
-  //   visit: "no",
-  //   github: "https://github.com/Adil0710/Inward-Outward-System",
-  //   image: inward,
-  //   tech: [
-  //     "C#",
-  //     "MS SQL Server",
-  //     "SAP Crystal Report",
-  //     "Visual Studio"
-  //   ],
-  // },
+  {
+    title: "Inward Outward System",
+    description:
+      "Created a desktop app for efficient letter tracking with SAP Crystal Reports, offering a centralized solution for managing sent and received correspondence.",
+    visit: "no",
+    github: "https://github.com/Adil0710/Inward-Outward-System",
+    image: inward,
+    tech: [
+      "C#",
+      "MS SQL Server",
+      "SAP Crystal Report",
+      "Visual Studio"
+    ],
+  },
 ] as const;
 
 export const linksSocial: LinkSocial[] = [

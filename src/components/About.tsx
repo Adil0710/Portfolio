@@ -22,7 +22,7 @@ function About() {
           Full-stack developer
         </span>{" "}
         with nearly a year of experience building interactive, high-performance web applications using{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
+        <span className="inline-flex items-center align-middle rounded-md py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/react-js-icon.png"
             alt="React Icon"
@@ -32,7 +32,7 @@ function About() {
           />
           React,
         </span>{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
+        <span className="inline-flex items-center align-middle rounded-md py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png"
             alt="React Icon"
@@ -42,7 +42,7 @@ function About() {
           />
           Next.js,
         </span>{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
+        <span className="inline-flex items-center align-middle rounded-md py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/node-js-icon.png"
             alt="React Icon"
@@ -53,7 +53,7 @@ function About() {
           Node.js
         </span>{" "}
         and{" "}
-        <span className="inline-flex items-center align-middle rounded-lg py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
+        <span className="inline-flex items-center align-middle rounded-md py-0.5 chip chipText md:px-2 px-1 text-sm font-semibold h-6">
           <Image
             src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mongodb-icon.png"
             alt="React Icon"

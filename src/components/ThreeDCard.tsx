@@ -14,21 +14,26 @@ export function ThreeDCardDemo() {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <div className="relative text-center">
+    <div className="relative text-center overflow-hidden">
       <div className="sm:mt-20 mt-14 sm:grid sm:grid-cols-2 sm:gap-x-4 flex flex-col">
-        {projectData
-          .slice(0, showAll ? projectData.length : 4)
-          .map((project, index) => (
-            <AnimatePresence key={index}>
+        <AnimatePresence>
+          {projectData
+            .slice(0, showAll ? projectData.length : 4)
+            .map((project, index) => (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
+                key={index} 
+                initial={{ opacity: 0, maxHeight: 0 }}
+                animate={{ 
+                  opacity: 1, 
+                  maxHeight: 1000, 
+                  transition: { duration: 1, ease: [0.16, 0.5, 0.3, 1] }
+                }}
                 exit={{ 
                   opacity: 0, 
-                  height: 0,
-                  transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } // Add transition here
+                  maxHeight: 0,
+                  transition: { duration: 0.5, ease: [0.16, 0.5, 0.3, 1] }
                 }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+               
               >
                 <CardContainer className="inter-var">
                   <CardBody className="bg-white relative group/card hover:shadow-2xl hover:shadow-[#0870b8]/[0.25] transition-shadow duration-300 dark:bg-[#050505] dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border flex flex-col sm:-mt-32 -mt-24 justify-between min-h-[450px] max-h-[550px]">
@@ -87,11 +92,11 @@ export function ThreeDCardDemo() {
                       </CardItem>
                     </div>
                     <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-px" />
-                  </CardBody>
+                    </CardBody>
                 </CardContainer>
               </motion.div>
-            </AnimatePresence>
-          ))}
+            ))}
+        </AnimatePresence>
       </div>
 
       <button

@@ -14,7 +14,7 @@ export function ThreeDCardDemo() {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <div className="relative text-center overflow-hidden">
+    <div className="relative text-center">
       <div className="sm:mt-20 mt-14 sm:grid sm:grid-cols-2 sm:gap-x-4 flex flex-col">
         <AnimatePresence>
           {projectData
@@ -114,3 +114,4 @@ export function ThreeDCardDemo() {
     </div>
   );
 }
+

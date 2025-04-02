@@ -15,7 +15,7 @@ import  Education  from "@/components/Education";
 const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <main className=" max-w-screen overflow-x-hidden dark:bg-black flex flex-col items-center">
+    <main className=" max-w-screen overflow-x-hidden dark:bg-black flex flex-col items-center scrollbar-hide">
       
       <Hero />
       <About />

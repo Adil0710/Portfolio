@@ -5,7 +5,7 @@ import { ThreeDCardDemo } from "./ThreeDCard";
 function Project() {
   return (
     <section
-      className=" mt-12 max-w-[43.5rem] scroll-mt-16 px-5 lg:px-0 md:px-5"
+      className=" mt-12 max-w-[45.3rem] scroll-mt-16 px-5 lg:px-0 md:px-5 scrollbar-hide"
       id="projects"
     >
        <SectionHeading>Projects</SectionHeading>

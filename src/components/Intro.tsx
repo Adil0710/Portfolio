@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { AnimatePresence, delay, motion } from "framer-motion";
-import { FlipWords } from "./ui/flip-words";
+import { AnimatePresence, motion } from "framer-motion";
 import adil from "../../public/adil2.jpg";
 import Image from "next/image";
 import { HoverBorderGradientDemo } from "./HoverBorderGradientDemo";
 import { Separator } from "./ui/separator";
-import X from "./X";
 import { SocialLinks } from "./SocialLinks";
 import BlurFade from "./ui/blur-fade";
 import { XIcon } from "lucide-react";
+import { introData } from "@/lib/introData";
 
 function Intro() {
   const [isModalOpen, setIsModalOpen] = useState(false); // Control modal visibility
-  const words = ["Full-Stack dev.", "MERN stack dev.", "Front-End dev."];
 
   // Function to close modal
   const toggleModal = () => {
@@ -39,9 +37,9 @@ function Intro() {
           <div className=" flex flex-col justify-center space-y-2 w-[60%]">
             <div className=" flex flex-row items-center md:gap-5 gap-2">
               <BlurFade delay={0.04}>
-              <h1 className=" text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none dark:text-white">
-                Hi, I&apos;m Adil {""}
-              </h1>
+                <h1 className=" text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none dark:text-white">
+                  Hi, I&apos;m {introData.name}{" "}
+                </h1>
               </BlurFade>
               <motion.h1
                 initial={{ opacity: 0, scale: 0 }}
@@ -67,21 +65,24 @@ function Intro() {
               </motion.h1>
             </div>
             <BlurFade delay={0.04}>
-            <div className="">
-              <p className=" md:text-xl dark:text-white/90">
-                {" "}
-                Full Stack Web Developer{" "}
-              </p>
-              <p className=" md:text-base mt-1.5 text-sm dark:text-neutral-400 text-neutral-600">
-                {" "}
-                📍 Maharashtra, India{" "}
-              </p>
-              <div className=" flex flex-row mt-4 items-center justify-start">
-                <HoverBorderGradientDemo />
-                <Separator orientation="vertical" className=" h-8 md:mr-5 md:ml-5 mr-2 ml-2"/>
-                <SocialLinks/>
+              <div className="">
+                <p className=" md:text-xl dark:text-white/90">
+                  {" "}
+                  {introData.role}{" "}
+                </p>
+                <p className=" md:text-base mt-1.5 text-sm dark:text-neutral-400 text-neutral-600">
+                  {" "}
+                  📍 {introData.location}{" "}
+                </p>
+                <div className=" flex flex-row mt-4 items-center justify-start">
+                  <HoverBorderGradientDemo />
+                  <Separator
+                    orientation="vertical"
+                    className=" h-8 md:mr-5 md:ml-5 mr-2 ml-2"
+                  />
+                  <SocialLinks />
+                </div>
               </div>
-            </div>
             </BlurFade>
           </div>
 
@@ -97,8 +98,7 @@ function Intro() {
               placeholder="blur"
               className="sm:h-40 sm:w-40 cursor-pointer h-32 w-32 rounded-full object-cover custom-object-position z-10 border-neutral-200 border"
             />
-            </BlurFade>
-          
+          </BlurFade>
         </div>
 
         {/* Modal (red div) */}
@@ -107,7 +107,11 @@ function Intro() {
             className={`fixed inset-0 w-full h-full z-[99999] bg-[#1f1f1f] bg-opacity-75 duration-300 transition-opacity flex items-center justify-center`}
             onClick={toggleModal} // Close modal on click (optional)
           >
-            <XIcon size={30} className="absolute right-8 top-5 cursor-pointer" onClick={toggleModal}/>
+            <XIcon
+              size={30}
+              className="absolute right-8 top-5 cursor-pointer"
+              onClick={toggleModal}
+            />
             <div className="">
               <Image
                 src={adil}

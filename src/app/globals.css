@@ -78,7 +78,7 @@
   @apply  dark:text-white/65 leading-7 max-w-full text-pretty font-sans text-sm text-muted-foreground;
 }
 .chip {
-  @apply bg-gray-200 dark:bg-neutral-800;
+  @apply bg-gray-100 dark:bg-neutral-900;
 }
 .chipText {
   @apply text-black dark:text-white;
@@ -175,4 +175,18 @@
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Chrome, Safari and Opera */
+}
+
+.shadow-chip {
+  box-shadow:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 1px 0px rgba(25, 28, 33, 0.08);
+}
+
+.shadow-chip-inset {
+  box-shadow:
+    inset 0 0 2px rgba(0, 0, 0, 0.12),
+    inset 0 0 6px rgba(0, 0, 0, 0.06),
+    inset 0 0 1px rgba(255, 255, 255, 0.05);
 }

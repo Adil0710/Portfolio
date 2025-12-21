@@ -22,10 +22,12 @@ export const FlipWords = ({
   }, [currentWord, words]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
+    if (!isAnimating) {
+      const timeoutId = setTimeout(() => {
         startAnimation();
       }, duration);
+      return () => clearTimeout(timeoutId);
+    }
   }, [isAnimating, duration, startAnimation]);
 
   return (
@@ -64,7 +66,9 @@ export const FlipWords = ({
       >
         {/* Wrap each word in a span and add margin */}
         {currentWord.split(" ").map((word, wordIndex) => (
-          <span key={wordIndex} className="inline-block mr-2 sm:mr-5 sm:mt-5"> {/* Add margin here */}
+          <span key={wordIndex} className="inline-block mr-2 sm:mr-5 sm:mt-5">
+            {" "}
+            {/* Add margin here */}
             {word.split("").map((letter, index) => (
               <motion.span
                 key={currentWord + index}

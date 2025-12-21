@@ -6,6 +6,7 @@ import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { sendEmail } from "../../actions/sendEmail";
 import toast from "react-hot-toast";
+import { contactEmail } from "@/lib/contactData";
 
 function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false); // State to manage submission status
@@ -49,15 +50,19 @@ function Contact() {
       <p className="TextClr text-sm">
         Please contact me directly at{" "}
         <a
-          href="mailto:Padil2246@gmail.com"
+          href={`mailto:${contactEmail}`}
           className="font-semibold underline text-black dark:text-white"
         >
-          Padil2246@gmail.com
+          {contactEmail}
         </a>{" "}
         or through this form.
       </p>
 
-      <form className="mt-10 flex flex-col" onSubmit={handleSubmit} ref={formRef}>
+      <form
+        className="mt-10 flex flex-col"
+        onSubmit={handleSubmit}
+        ref={formRef}
+      >
         <input
           type="email"
           name="senderEmail"
@@ -65,7 +70,6 @@ function Contact() {
           maxLength={500}
           placeholder="Your email"
           className="TextClr text-sm h-14 px-4 rounded-lg border BorderAndBg focus:outline focus:outline-black/60 focus:outline-[0.1px] ring-neutral-500 dark:ring-neutral-300 focus-visible:ring-[0.1px] dark:focus:outline-black/10"
-
         />
         <textarea
           placeholder="Your message"

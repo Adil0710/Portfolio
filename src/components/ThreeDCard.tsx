@@ -56,7 +56,7 @@ export function ThreeDCardDemo() {
                           key={index}
                           as="span"
                           translateZ="80"
-                          className="block bg-gray-100 border dark:bg-neutral-800 rounded-full py-0.5 px-2 text-neutral-600 text-[10.5px] leading-4 tracking-wide text-left dark:text-neutral-400"
+                          className="block bg-gray-100 border dark:bg-neutral-800 rounded-full py-0.5 px-2 text-neutral-600 text-[10.5px] leading-4 tracking-wide text-left dark:text-neutral-400 shadow-chip-inset"
                         >
                           {techno}
                         </CardItem>

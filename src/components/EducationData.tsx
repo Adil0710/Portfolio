@@ -1,67 +1,33 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import BVU from "../../public/BVU.png";
+import { educationData } from "@/lib/educationData";
 
 export function EducationData() {
-  const data = [
-    {
-      title: "M.C.A.",
-      logo: BVU,
-      company: (
-        <div className=" flex flex-row items-center justify-between w-full  md:text-sm text-xs">
-          <p className=" flex flex-row items-center text-neutral-600 font-medium dark:text-neutral-400">
-            <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
-            Bharati Vidyapeeth University.
-          </p>
-        </div>
-      ),
-      duration: (
-        <p className="text-neutral-500 font-normal md:text-sm">
-          Jul 2022 - Jul 2024
+  const data = educationData.map((item) => ({
+    title: item.title,
+    logo: item.logo,
+    company: (
+      <div className=" flex flex-row items-center justify-between w-full  md:text-sm text-xs">
+        <p className=" flex flex-row items-center text-neutral-600 font-medium dark:text-neutral-400">
+          <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
+          {item.university}
         </p>
-      ),
-      content: (
-        <div>
-          <div className="">
-            <div className="flex gap-2 items-center leading-normal text-left text-neutral-600 font-normal dark:text-neutral-400 text-xs md:text-sm">
-              During my MCA at Bharati Vidyapeeth, I deepened my coding skills,
-              tackling advanced concepts & real-world projects that fueled my
-              passion for software development.
-            </div>
+      </div>
+    ),
+    duration: (
+      <p className="text-neutral-500 font-normal md:text-sm">{item.duration}</p>
+    ),
+    content: (
+      <div>
+        <div className="">
+          <div className="flex gap-2 items-center leading-normal text-left text-neutral-600 font-normal dark:text-neutral-400 text-xs md:text-sm">
+            {item.description}
           </div>
         </div>
-      ),
-    },
-    {
-      title: "B.C.A.",
-      logo: BVU,
-      company: (
-        <div className=" flex flex-row items-center justify-between w-full  md:text-sm text-xs">
-          <p className=" flex flex-row items-center text-neutral-600 font-medium dark:text-neutral-400">
-            <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
-            Bharati Vidyapeeth University.
-          </p>
-        </div>
-      ),
-      duration: (
-        <p className="text-neutral-500 font-normal md:text-sm">
-          Jul 2019 - Jul 2022
-        </p>
-      ),
-      content: (
-        <div>
-          <div className="">
-            <div className="flex gap-2 items-center leading-normal text-left text-neutral-600 font-normal dark:text-neutral-400 text-xs md:text-sm">
-              My coding journey began during my BCA at Bharati Vidyapeeth, where
-              I discovered the thrill of turning ideas into reality through
-              code, sparking a passion that drives me today.
-            </div>
-          </div>
-        </div>
-      ),
-    },
-  ];
+      </div>
+    ),
+  }));
   return (
     <div className="w-full mt-5">
       <Timeline data={data} />

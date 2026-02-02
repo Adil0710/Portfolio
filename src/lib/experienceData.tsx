@@ -1,13 +1,22 @@
 import FIT from "../../public/FIT.png";
 import MHS from "../../public/MHS.png";
 import ATT from "../../public/ATT.jpg";
+import NAP from "../../public/Napworks.jpg";
 
 export const experienceData = [
   {
     title: " Full-stack Developer",
+    logo: NAP,
+    companyName: "NAP Works Pvt. Ltd.",
+    duration: "Apr 2025 - Present",
+    description:
+      "At NAP Works Pvt. Ltd., led the end-to-end development of a full-stack inspection management platform used across construction, logistics, property, and safety industries, serving 1,000+ active users. Designed and implemented a dynamic drag-and-drop form builder with 20+ customizable fields, validation rules, and conditional logic, improving inspection efficiency by 35%. Built scalable REST APIs consumed by web, iOS, and Android applications, handling 50K+ monthly requests with high reliability. Developed role-based dashboards with real-time analytics and reporting, enabling better operational decision-making. Integrated AWS S3 with signed URLs for secure document management and deployed the platform on AWS EC2 using Docker and Nginx, achieving 99.9% uptime. Led Stripe-to-PayPal payment migration and managed end-to-end cloud infrastructure across multiple projects, contributing to recurring SaaS revenue growth and enterprise client expansion.",
+  },
+  {
+    title: " Full-stack Developer",
     logo: FIT,
     companyName: "Furde Infotech Pvt. Ltd.",
-    duration: "Sept 2024 - Present",
+    duration: "Sep 2024 - Nov 2025 ",
     description:
       "At Furde Infotech Pvt. Ltd., developed modern, responsive websites and applications with admin panel dashboards and job boards, improving UI/UX by 22%. Built scalable web apps using React.js, Next.js, Node.js, TypeScript, and UI libraries like Shadcn and Aceternity UI, integrating MongoDB for better data management, which reduced admin tasks by 30% and boosted user engagement by 14%.",
   },

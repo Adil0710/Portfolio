@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { FaAws } from "react-icons/fa";
 import {
+  SiAwslambda,
   SiDocker,
   SiExpress,
   SiGit,
@@ -229,7 +231,24 @@ export const SkillsData = (): Skill[] => {
       icon: (
         <div
           style={{
-            backgroundColor: "#0db7ed15",
+              backgroundColor: "#191f2115",
+            borderColor: "#191f2130",
+           
+            borderRadius: "0.25rem", // equivalent to rounded-sm
+            borderWidth: "1px",
+          }}
+          className="flex items-center opacity-15 justify-center px-2 py-1.5"
+        >
+          <FaAws size={IconSize} color="#000" />
+        </div>
+      ),
+    },
+     {
+      name: "AWS",
+      icon: (
+        <div
+          style={{
+           backgroundColor: "#0db7ed15",
             borderColor: "#0db7ed30",
             borderRadius: "0.25rem", // equivalent to rounded-sm
             borderWidth: "1px",

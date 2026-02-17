@@ -227,7 +227,7 @@ export const SkillsData = (): Skill[] => {
       ),
     },
     {
-      name: "Docker",
+      name: "AWS",
       icon: (
         <div
           style={{
@@ -239,12 +239,12 @@ export const SkillsData = (): Skill[] => {
           }}
           className="flex items-center opacity-15 justify-center px-2 py-1.5"
         >
-          <FaAws size={IconSize} color="#000" />
+          <FaAws size={IconSize} />
         </div>
       ),
     },
      {
-      name: "AWS",
+      name: "Docker",
       icon: (
         <div
           style={{

@@ -2,7 +2,7 @@ export const aboutData = {
   title: "About Me",
   roleLabel: "Full-stack developer",
   experienceText:
-    "with nearly a year of experience building interactive, high-performance web applications using",
+    "with 2+ year of experience building interactive, high-performance web applications using",
   technologies: ["React", "Next.js", "Node.js", "MongoDB"],
   specializationPrefix:
     "I specialize in creating efficient, user-friendly solutions and have expertise in both",

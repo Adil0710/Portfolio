@@ -69,6 +69,7 @@ export function ThreeDCardDemo() {
                         width="1000"
                         className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                         alt="thumbnail"
+                        placeholder="blur"
                       />
                     </CardItem>
                     <div className="flex justify-between items-center mt-4">

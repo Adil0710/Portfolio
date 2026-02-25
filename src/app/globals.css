@@ -166,7 +166,6 @@
   color: #e4ded7;
 }
 
-
 /* Hide scrollbar during animations */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* IE and Edge */
@@ -189,4 +188,9 @@
     inset 0 0 2px rgba(0, 0, 0, 0.12),
     inset 0 0 6px rgba(0, 0, 0, 0.06),
     inset 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

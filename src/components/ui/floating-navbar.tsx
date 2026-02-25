@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import { cn } from "@/lib/utils";
 import ThemeSwitch from '@/components/ThemeSwitch';
 import { useRouter, usePathname } from "next/navigation";
+import { AnimatedThemeToggler } from "./animated-theme-toggler";
 
 export const FloatingNav = ({
   navItems,
@@ -84,7 +85,8 @@ export const FloatingNav = ({
             
           </button>
         ))}
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
+         <AnimatedThemeToggler />
       </motion.div>
     </AnimatePresence>
   );

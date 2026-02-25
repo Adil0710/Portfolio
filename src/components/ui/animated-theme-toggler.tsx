@@ -37,14 +37,27 @@ export const AnimatedThemeToggler = ({
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return;
 
-    await document.startViewTransition(() => {
+    if (!document.startViewTransition) {
+      // Fallback if browser doesn't support it
       flushSync(() => {
         const newTheme = !isDark;
         setIsDark(newTheme);
         document.documentElement.classList.toggle("dark");
         localStorage.setItem("theme", newTheme ? "dark" : "light");
       });
-    }).ready;
+      return;
+    }
+
+    const transition = document.startViewTransition(() => {
+      flushSync(() => {
+        const newTheme = !isDark;
+        setIsDark(newTheme);
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", newTheme ? "dark" : "light");
+      });
+    });
+
+    await transition.ready;
 
     const { top, left, width, height } =
       buttonRef.current.getBoundingClientRect();

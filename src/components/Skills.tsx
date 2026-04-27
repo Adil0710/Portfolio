@@ -23,7 +23,7 @@ const skills = SkillsData();
 function Skills() {
   return (
     <section
-      className="mt-5 max-w-[45.3rem] scroll-mt-24 px-5 lg:px-0 md:px-5"
+      className="pb-4 max-w-[45.3rem] scroll-mt-24 px-5 lg:px-0 md:px-5"
       id="skills"
     >
       <SectionHeading>My Skills</SectionHeading>

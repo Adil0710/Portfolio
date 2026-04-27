@@ -73,21 +73,28 @@ export default function RootLayout({
       <body className={schibstedGrotesk.className}>
         <ThemeProvider>
           <ClientLayout>
-            <div className="fixed inset-x-0 top-0 isolate z-[99] h-20">
+            {/* <div className="fixed inset-x-0 top-0 isolate z-[99] h-20">
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[1px]"></div>
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[2px]"></div>
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[3px]"></div>
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[6px]"></div>
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[12px]"></div>
-            </div>
-            {children}
-            <div className="fixed inset-x-0 bottom-0 isolate z-[99] h-16">
+            </div> */}
+
+          <div className="relative min-h-screen">
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-50 h-24 bg-gradient-to-b from-[#f4f4f0] dark:from-[#1D1D16] to-transparent" />
+
+    {children}
+
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 h-24 bg-gradient-to-t from-[#f4f4f0] dark:from-[#1D1D16] to-transparent" />
+  </div>
+            {/* <div className="fixed inset-x-0 bottom-0 isolate z-[99] h-16">
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]"></div>
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]"></div>
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[3px]"></div>
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[6px]"></div>
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[12px]"></div>
-            </div>
+            </div> */}
           </ClientLayout>
         </ThemeProvider>
       </body>

@@ -11,6 +11,7 @@ import Project from "@/components/Project";
 import { useEffect } from "react";
 import Experience from "@/components/Experience";
 import  Education  from "@/components/Education";
+import { Divider } from "@/components/ui/Divider";
 
 const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
@@ -19,10 +20,15 @@ const Home: NextPage = () => {
       
       <Hero />
       <About />
+      <Divider/>
       <Experience />
+      <Divider/>
       <Education/>
+      <Divider/>
       <Skills />
+      <Divider/>
       <Project />
+      
       <Contact />
       <Toaster
         position="top-center"

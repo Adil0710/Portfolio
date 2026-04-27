@@ -59,7 +59,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full bg-[#f4f4f0] dark:bg-[#1d1d16]" ref={containerRef}>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-10">
+      <div ref={ref} className="relative max-w-7xl mx-auto">
         {data.map((item, index) => {
           const isExpanded = !!expandedItems[index];
 

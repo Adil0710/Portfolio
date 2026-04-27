@@ -39,7 +39,7 @@ export function WorkExperience() {
     ),
   }));
   return (
-    <div className="w-full mt-3">
+    <div className="w-full">
       <Timeline data={data} />
     </div>
   );

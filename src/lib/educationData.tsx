@@ -1,4 +1,4 @@
-import BVU from "../../public/BVU.png";
+import BVU from "../../public/BVU.webp";
 
 export const educationData = [
   {

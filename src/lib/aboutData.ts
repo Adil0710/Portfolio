@@ -6,8 +6,8 @@ export const aboutData = {
   technologies: ["React", "Next.js", "Node.js", "MongoDB"],
   specializationPrefix:
     "I specialize in creating efficient, user-friendly solutions and have expertise in both",
-  frontEndLabel: "Front-end",
-  backEndLabel: "Back-end",
+  frontEndLabel: "Frontend",
+  backEndLabel: "Backend",
   closingText:
     "development. I enjoy sharing my knowledge through teaching and mentoring others in tech. When I'm not coding, I love playing video games.",
 };

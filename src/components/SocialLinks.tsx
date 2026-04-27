@@ -22,9 +22,9 @@ function SocialLink({
   return (
     <Link className="p-1 -m-1 group flex" {...props} href={href}>
       {outline ? (
-        <Icon className="md:w-5 md:h-5 w-4 h-4 stroke-[1px] transition text-neutral-900 group-hover:text-neutral-900 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
+        <Icon className="md:w-5 md:h-5 w-4 h-4 stroke-[1px] transition text-foreground/70 group-hover:text-foreground/75" />
       ) : (
-        <Icon className="md:w-6 md:h-6 w-5 h-5 transition-all text-neutral-900 group-hover:text-neutral-900 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
+        <Icon className="md:w-6 md:h-6 w-5 h-5 transition-all text-foreground/70 group-hover:text-foreground/75" />
       )}
     </Link>
   );
@@ -38,7 +38,7 @@ export function SocialLinks() {
           {/* Hover arrow animation */}
           <div className="transition-all translate-y-5 opacity-0 group-hover:translate-y-3 group-hover:opacity-100">
             <div className="relative flex items-center group">
-              <ArrowUpRight className="absolute w-5 h-5 transition-all dark:text-white opacity-0 group-hover:translate-x-1 group-hover:opacity-100" />
+              <ArrowUpRight className="absolute w-5 h-5 transition-all text-foreground/60 opacity-0 group-hover:translate-x-1 group-hover:opacity-100" />
             </div>
           </div>
           {/* Social Icon */}
@@ -47,7 +47,7 @@ export function SocialLinks() {
             rel="noopener noreferrer"
             target="_blank"
             aria-label={link.label}
-            className="transition-all group-hover:opacity-20 group-hover:blur-sm sm:h-7 blur-0 grayscale-0"
+            className="transition-all group-hover:opacity-20 group-hover:blur-sm  sm:h-7 blur-0 grayscale-0"
             icon={link.icon}
             outline={link.outline}
           />

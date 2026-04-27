@@ -77,8 +77,6 @@ import {
   const styles: Record<string, React.CSSProperties> = {
     main: {
       backgroundColor: "#ffffff",
-      fontFamily:
-        '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
     },
     container: {
       margin: "10px auto",

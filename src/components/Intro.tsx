@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import adil from "../../public/adil2.jpg";
+import adil from "../../public/adil2.webp";
 import Image from "next/image";
 import { HoverBorderGradientDemo } from "./HoverBorderGradientDemo";
 import { Separator } from "./ui/separator";
@@ -37,7 +37,7 @@ function Intro() {
           <div className=" flex flex-col justify-center space-y-2 w-[60%]">
             <div className=" flex flex-row items-center md:gap-5 gap-2">
               <BlurFade delay={0.04}>
-                <h1 className=" text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none dark:text-white">
+                <h1 className=" text-xl font-bold tracking-wide sm:text-2xl xl:text-3xl/none text-foreground/80">
                   Hi, I&apos;m {introData.name}{" "}
                 </h1>
               </BlurFade>
@@ -59,18 +59,18 @@ function Intro() {
                     delay: 0.2,
                   },
                 }}
-                className="cursor-pointer z-20 -mt-4 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="cursor-pointer z-20 -mt-4 text-xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none"
               >
                 👋
               </motion.h1>
             </div>
             <BlurFade delay={0.04}>
               <div className="">
-                <p className=" md:text-xl dark:text-white/90">
+                <p className=" md:text-lg text-foreground/70">
                   {" "}
                   {introData.role}{" "}
                 </p>
-                <p className=" md:text-base mt-1.5 text-sm dark:text-neutral-400 text-neutral-600">
+                <p className=" md:text-base mt-1.5 text-sm text-foreground/70">
                   {" "}
                   📍 {introData.location}{" "}
                 </p>

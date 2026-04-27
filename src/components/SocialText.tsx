@@ -19,7 +19,7 @@ export function LinkText({ className, href, children, icon: Icon, outline }:Link
     <li className={cn(className, 'flex')}>
       <Link href={href} rel="noopener noreferrer" target="_blank">
         <div className="relative group">
-          <div className="absolute z-10 flex items-center justify-center text-black dark:text-white w-full h-full transition-all translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+          <div className="absolute z-10 flex items-center justify-center text-foreground/75 w-full h-full transition-all translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
             <p className="font-bold cursor-pointer body-primary">
               {children}
             </p>
@@ -33,7 +33,7 @@ export function LinkText({ className, href, children, icon: Icon, outline }:Link
             ) : (
               <Icon className="flex-none w-6 h-6 transition " />
             )}
-            <span className="ml-2 group-hover:text-neutral-700 dark:group-hover:text-zinc-300">
+            <span className="ml-2 group-hover:text-foreground/60">
               {children}
             </span>
           </div>

@@ -6,7 +6,7 @@ import BlurFade from "./ui/blur-fade";
 function Experience() {
   return (
     <section
-      className="mt-12 md px-5 md:px-0 max-w-[45.3rem] scroll-mt-16 leading-8"
+      className="mt-8 md px-5 md:px-0 max-w-[45.3rem] scroll-mt-16 leading-8"
       id="experience"
     >
       <BlurFade delay={0.04 * 5}>

@@ -1,10 +1,10 @@
 // app/layout.tsx
-import { Inter } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/themeContext";
 import ClientLayout from "@/components/ClientLayout"; // Import client wrapper
 
-const inter = Inter({ subsets: ["latin"] });
+const schibstedGrotesk = Schibsted_Grotesk({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Adil Patel | Fullstack Developer",
@@ -70,7 +70,7 @@ export default function RootLayout({
        <meta name="google-site-verification" content="RiVqt457WkYvXlAs4yq0Md3zcIEsyw8zWaiF5djt0zI" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={`${inter.className} dark:bg-[rgba(0,0,0)]`}>
+      <body className={schibstedGrotesk.className}>
         <ThemeProvider>
           <ClientLayout>
             <div className="fixed inset-x-0 top-0 isolate z-[99] h-20">

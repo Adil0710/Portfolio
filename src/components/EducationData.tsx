@@ -5,31 +5,41 @@ import { educationData } from "@/lib/educationData";
 
 export function EducationData() {
   const data = educationData.map((item) => ({
-    title: item.title,
+    title: (
+      <p className="flex flex-row items-center text-foreground/75 leading-5 font-semibold">
+        {item.title}
+      </p>
+    ),
     logo: item.logo,
     company: (
-      <div className=" flex flex-row items-center justify-between w-full  md:text-sm text-xs">
-        <p className=" flex flex-row items-center text-neutral-600 font-medium dark:text-neutral-400">
+      <div className=" flex flex-row items-center justify-between w-full leading-5 md:text-sm text-xs">
+        <p className=" flex flex-row items-center text-foreground/60 font-medium">
           <BsFillPatchCheckFill className="text-blue-500 mr-2 text-base" />{" "}
           {item.university}
         </p>
       </div>
     ),
     duration: (
-      <p className="text-neutral-500 font-normal md:text-sm">{item.duration}</p>
+      <p className="text-foreground/60 font-normal text-sm">{item.duration}</p>
     ),
     content: (
       <div>
         <div className="">
-          <div className="flex gap-2 items-center leading-normal text-left text-neutral-600 font-normal dark:text-neutral-400 text-xs md:text-sm">
-            {item.description}
+          <div className="leading-normal tracking-wide text-left text-foreground/60 text-xs">
+            {item.description?.length
+              ? item.description.map((paragraph, i) => (
+                  <p key={i} className={i === 0 ? "" : "mt-4"}>
+                    {paragraph}
+                  </p>
+                ))
+              : null}
           </div>
         </div>
       </div>
     ),
   }));
   return (
-    <div className="w-full mt-5">
+    <div className="w-full mt-3">
       <Timeline data={data} />
     </div>
   );

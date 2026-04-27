@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,7 +14,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 /* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,6 +24,22 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+body {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@apply bg-[#f4f4f0]  dark:bg-[#1D1D16] dark:text-[#f4f4f0] text-[#1D1D16] transition-all duration-200;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+
+::selection {
+	background-color: oklch(92.4% 0.12 95.746);
+	color: oklch(15.3% 0.006 107.1);
+}
 
 @layer utilities {
   .text-balance {
@@ -49,21 +65,20 @@
 * {
   scrollbar-width: thin; /* Makes scrollbar thinner */
   scrollbar-color: rgb(160, 160, 160) transparent; /* Thumb and track colors */
-
   scroll-behavior: smooth !important;
 }
 
 .custom-object-position {
   object-position: 50% 100%; /* Adjust the second value to move the image vertically */
 }
-::selection {
+/* ::selection {
   background-color: rgba(0, 0, 0, 0.993);
   color: white;
-}
-.dark ::selection {
+} */
+/* .dark ::selection {
   background-color: rgba(255, 255, 255, 0.993);
   color: black;
-}
+} */
 .hidden {
   display: none;
 }
@@ -72,16 +87,16 @@
   display: block;
 }
 .BorderAndBg {
-  @apply bg-gray-50 dark:bg-neutral-900 hover:bg-gray-100 dark:hover:bg-neutral-800  border duration-300 transition-background;
+  @apply bg-[#f4f4f0] dark:bg-[#1d1d16] border-foreground/10 border text-foreground/75 duration-300 transition-colors;
 }
 .TextClr {
-  @apply  dark:text-white/65 leading-7 max-w-full text-pretty font-sans text-sm text-muted-foreground;
+  @apply   leading-7 max-w-full text-pretty text-sm text-foreground/60;
 }
 .chip {
-  @apply bg-gray-100 dark:bg-neutral-900;
+  @apply bg-[#f4f4f0] dark:bg-[#1d1d16];
 }
 .chipText {
-  @apply text-black dark:text-white;
+  @apply text-foreground/75;
 }
 .cardShadow {
   box-shadow: 0px 2px 2px 0px #45454540;
@@ -150,19 +165,20 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+  @apply bg-[#f4f4f0] text-[#2b2b22] dark:bg-[#2b2b22] dark:text-[#f4f4f0];
   }
 }
 
 /* Light mode (default) */
 .preloader {
-  background-color: #f0f0f0;
+  background-color: #f4f4f0;
   color: #1b2120;
+  
 }
 
 /* Dark mode */
 .dark .preloader {
-  background-color: #080808;
+  background-color: #1d1d16;
   color: #e4ded7;
 }
 
@@ -178,16 +194,29 @@
 
 .shadow-chip {
   box-shadow:
-    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
-    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
-    0px 0px 1px 0px rgba(25, 28, 33, 0.08);
+    0px 2px 3px -1px rgba(0, 0, 0, 0.08),
+    0px 1px 0px 0px rgba(60, 60, 40, 0.04),
+    0px 0px 1px 0px rgba(60, 60, 40, 0.08);
 }
 
 .shadow-chip-inset {
   box-shadow:
-    inset 0 0 2px rgba(0, 0, 0, 0.12),
-    inset 0 0 6px rgba(0, 0, 0, 0.06),
-    inset 0 0 1px rgba(255, 255, 255, 0.05);
+    inset 0 0 2px rgba(0, 0, 0, 0.08),
+    inset 0 0 6px rgba(0, 0, 0, 0.05),
+    inset 0 0 1px rgba(255, 255, 255, 0.4);
+}
+.dark .shadow-chip {
+  box-shadow:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.6),
+    0px 1px 0px 0px rgba(255, 255, 255, 0.05),
+    0px 0px 1px 0px rgba(255, 255, 255, 0.08);
+}
+
+.dark .shadow-chip-inset {
+  box-shadow:
+    inset 0 0 2px rgba(0, 0, 0, 0.6),
+    inset 0 0 6px rgba(0, 0, 0, 0.4),
+    inset 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 ::view-transition-old(root), ::view-transition-new(root) {

@@ -6,15 +6,21 @@ export const educationData = [
     logo: BVU,
     university: "Bharati Vidyapeeth University.",
     duration: "Jul 2022 - Jul 2024",
-    description:
-      "During my MCA at Bharati Vidyapeeth, I deepened my coding skills, tackling advanced concepts & real-world projects that fueled my passion for software development.",
+    description: [
+      "Deepened my coding skills through advanced coursework and real-world projects, strengthening my foundation in software development.",
+      "Focused on building practical, end-to-end applications.",
+      "Strengthened problem-solving and engineering fundamentals through consistent hands-on work.",
+    ],
   },
   {
     title: "B.C.A.",
     logo: BVU,
     university: "Bharati Vidyapeeth University.",
     duration: "Jul 2019 - Jul 2022",
-    description:
-      "My coding journey began during my BCA at Bharati Vidyapeeth, where I discovered the thrill of turning ideas into reality through code, sparking a passion that drives me today.",
+    description: [
+      "Started my coding journey and discovered the excitement of turning ideas into working software.",
+      "Built early projects that developed my interest in product-focused development.",
+      "Established strong fundamentals that motivated me to keep learning and building.",
+    ],
   },
 ];

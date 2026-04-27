@@ -67,7 +67,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed sm:bottom-8 bottom-5 inset-x-0 mx-auto border rounded-full dark:bg-neutral-950 bg-white z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+          "flex max-w-fit fixed sm:bottom-8 bottom-5 inset-x-0 mx-auto border rounded-full bg-[#f4f4f0] dark:bg-[#1d1d16] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
           className
         )}
       >
@@ -76,7 +76,7 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             onClick={() => handleNavClick(navItem.link)}
             className={cn(
-              "relative dark:text-neutral-300  items-center justify-center flex space-x-1 text-neutral-800 dark:hover:text-white hover:text-black font-medium duration-200"
+              "relative dark:text-neutral-300  items-center justify-center flex space-x-1 text-foreground/65 hover:text-foreground/80 font-medium duration-200"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>

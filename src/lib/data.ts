@@ -1,8 +1,8 @@
-import inward from "../../public/inward.png";
-import memories from "../../public/memories.png";
-import freescribe from "../../public/freescribe.png";
-import pinterest from "../../public/pinterest.png";
-import profilecraft from "../../public/profilecraft.png";
+import inward from "../../public/inward.webp";
+import memories from "../../public/memories.webp";
+import freescribe from "../../public/freescribe.webp";
+import pinterest from "../../public/pinterest.webp";
+import profilecraft from "../../public/profilecraft.webp";
 import { divider, image } from "@nextui-org/theme";
 // data/links.js
 import { Github, Linkedin, Instagram } from "lucide-react";

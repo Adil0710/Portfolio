@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function page() {
   return (
@@ -27,9 +29,72 @@ function page() {
         >
           <FaGithub className="text-base" /> Github
         </Link>
+
+        <Signature />
       </div>
     </div>
   );
 }
 
 export default page;
+
+
+
+
+const Signature = () => {
+  return (
+    <motion.svg
+      viewBox="0 0 500 150"
+      className="mx-auto h-10"
+    >
+      {/* A */}
+      <motion.path
+        d="M50 110 L80 20 L110 110 M65 75 L95 75"
+        stroke="currentColor"
+        strokeWidth="3"
+        fill="transparent"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        whileInView={{ pathLength: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+      />
+
+      {/* d */}
+      <motion.path
+        d="M130 110 L130 20 M130 75 C130 50, 180 50, 180 75 C180 100, 130 100, 130 75"
+        stroke="currentColor"
+        strokeWidth="3"
+        fill="transparent"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        whileInView={{ pathLength: 1 }}
+        transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
+      />
+
+      {/* i */}
+      <motion.path
+        d="M210 110 L210 60 M210 40 L210 40"
+        stroke="currentColor"
+        strokeWidth="3"
+        fill="transparent"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        whileInView={{ pathLength: 1 }}
+        transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
+      />
+
+      {/* l */}
+      <motion.path
+        d="M250 110 L250 30"
+        stroke="currentColor"
+        strokeWidth="3"
+        fill="transparent"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        whileInView={{ pathLength: 1 }}
+        transition={{ duration: 1, delay: 1.3, ease: "easeInOut" }}
+      />
+    </motion.svg>
+  );
+};
+

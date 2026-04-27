@@ -23,15 +23,15 @@ const skills = SkillsData();
 function Skills() {
   return (
     <section
-      className="mt-12 max-w-[45.3rem] scroll-mt-24 px-5 lg:px-0 md:px-5"
+      className="mt-5 max-w-[45.3rem] scroll-mt-24 px-5 lg:px-0 md:px-5"
       id="skills"
     >
       <SectionHeading>My Skills</SectionHeading>
-      <div className=" mt-10">
-        <ul className=" flex flex-wrap justify-center gap-2.5 text-black/90 dark:text-white/75">
+      <div className=" mt-4">
+        <ul className=" flex flex-wrap justify-center  gap-2.5 ">
           {skills.map((skill, index) => (
             <motion.li
-              className="relative BorderAndBg rounded-lg min-w-20 max-w-20 sm:min-w-28 sm:max-w-28 px-5 py-3 flex flex-col gap-2 cursor-pointer items-center group"
+              className="relative BorderAndBg rounded-lg min-w-20 max-w-20 sm:min-w-28  sm:max-w-28 px-5 py-3 flex flex-col gap-2 cursor-pointer items-center group"
               key={index}
               variants={fadeInAnimationVariants}
               initial="initial"

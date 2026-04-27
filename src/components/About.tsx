@@ -8,16 +8,16 @@ import { aboutData } from "@/lib/aboutData";
 function About() {
   return (
     <section
-      className="mt-10 max-w-[45.3rem] z-20 scroll-mt-44 leading-8 px-5 lg:px-0 md:px-5"
+      className="mt-3 max-w-[45.3rem] z-20 scroll-mt-44 leading-8 px-5 lg:px-0 md:px-5"
       id="about"
     >
       <BlurFade delay={0.04 * 3}>
         <SectionHeading>{aboutData.title}</SectionHeading>
       </BlurFade>
       <BlurFade delay={0.04 * 4}>
-        <p className="text-left TextClr mt-5">
+        <p className="text-left TextClr mt-3 tracking-wide">
           I&apos;m a dedicated{" "}
-          <span className="font-semibold underline chipText">
+          <span className="font-semibold underline decoration-dotted decoration-foreground/50 underline-offset-2 chipText">
             {" "}
             {aboutData.roleLabel}
           </span>{" "}
@@ -63,15 +63,17 @@ function About() {
             />
             {aboutData.technologies[3]}.
           </span>{" "}
-          {aboutData.specializationPrefix}{" "}
-          <span className="font-semibold underline chipText">
+          <br />
+          <span className="mt-3 inline-block">{aboutData.specializationPrefix}</span>{" "}
+          <span className="font-semibold underline decoration-dotted decoration-foreground/50 underline-offset-2 chipText">
             {aboutData.frontEndLabel}
           </span>{" "}
           and{" "}
-          <span className="font-semibold underline chipText">
+          <span className="font-semibold underline decoration-dotted decoration-foreground/50 underline-offset-2 chipText">
             {aboutData.backEndLabel}
           </span>{" "}
-          {aboutData.closingText}
+          <br />
+          <span className="mt-3 inline-block"> {aboutData.closingText}</span>
         </p>
       </BlurFade>
     </section>

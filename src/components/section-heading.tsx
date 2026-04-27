@@ -9,7 +9,7 @@ interface SectionHeadingProps {
 function SectionHeading({children} : SectionHeadingProps) {
   return (
     <motion.div
-    className=' text-xl font-bold mb-2 text-black dark:text-white'
+    className=' text-lg font-semibold mb-0 text-foreground/80'
     
     >
         {children}

@@ -6,7 +6,7 @@ import { EducationData } from "./EducationData";
 function Experience() {
   return (
     <section
-      className="mt-12 md px-5 md:px-0 max-w-[45.3rem] scroll-mt-16 leading-8"
+      className="mt-5 md px-5 md:px-0 max-w-[45.3rem] scroll-mt-16 leading-8"
       id="education"
     >
       <BlurFade delay={0.04 * 7}>

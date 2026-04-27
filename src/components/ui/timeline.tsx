@@ -6,7 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
-  title: string;
+  title: React.ReactNode;
   content: React.ReactNode;
   company: React.ReactNode;
   duration: React.ReactNode;
@@ -58,7 +58,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   // via the effect above, so no extra manual calculation is needed.
 
   return (
-    <div className="w-full bg-white dark:bg-black font-sans" ref={containerRef}>
+    <div className="w-full bg-[#f4f4f0] dark:bg-[#1d1d16]" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-10">
         {data.map((item, index) => {
           const isExpanded = !!expandedItems[index];
@@ -72,13 +72,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 className=" flex flex-col md:flex-row z-40 items-center top-40 self-start min-w-xs lg:min-w-[50%] md:w-full cursor-pointer"
                 onClick={(e) => handleClick(index)}
               >
-                <div className="h-12 absolute left-0 w-12 rounded-full border bg-white flex items-center justify-center">
+                <div className="
+               shadow-lg h-12 absolute left-0 w-12 rounded-full  bg-white flex items-center justify-center">
                   <Image
                     src={item.logo}
-                    alt={item.title}
+                    alt={"company"}
                     width={100}
                     height={100}
-                    className="rounded-full"
+                    className="rounded-full "
                   />
                 </div>
 
@@ -87,7 +88,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     {item.title}
                     <ChevronRightIcon
                       className={cn(
-                        "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                        "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 text-foreground/60 group-hover:opacity-100",
                         expandedItems[index]
                           ? "rotate-90 opacity-1"
                           : "rotate-0"
@@ -107,7 +108,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   initial={contentInitial}
                   animate={getContentAnimate(isExpanded)}
                   transition={contentTransition}
-                  className="timeline-content md:block md:pl-20 hidden"
+                  className="timeline-content md:block md:pl-20 mt-3 hidden tracking-wide"
                 >
                   {item.content}
                 </motion.div>
@@ -139,7 +140,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     initial={contentInitial}
                     animate={getContentAnimate(isExpanded)}
                     transition={contentTransition}
-                    className="timeline-content mt-4 md:hidden block"
+                    className="timeline-content md:hidden block tracking-wide"
                   >
                     {item.content}
                   </motion.div>

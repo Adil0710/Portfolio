@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import Experience from "@/components/Experience";
 import  Education  from "@/components/Education";
 import { Divider } from "@/components/ui/Divider";
+import { Settings } from "@/components/settings";
 
 const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
@@ -41,6 +42,7 @@ const Home: NextPage = () => {
           },
         }}
       />
+      <Settings/>
     </main>
   );
 };

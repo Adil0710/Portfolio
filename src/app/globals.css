@@ -26,19 +26,19 @@
 } */
 
 body {
-	margin: 0;
-	padding: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	@apply bg-[#f4f4f0]  dark:bg-[#1D1D16] dark:text-[#f4f4f0] text-[#1D1D16];
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-[#f4f4f0]  dark:bg-[#1D1D16] dark:text-[#f4f4f0] text-[#1D1D16];
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 ::selection {
-	background-color: oklch(92.4% 0.12 95.746);
-	color: oklch(15.3% 0.006 107.1);
+  background-color: oklch(92.4% 0.12 95.746);
+  color: oklch(15.3% 0.006 107.1);
 }
 
 @layer utilities {
@@ -90,7 +90,7 @@ body {
   @apply bg-[#f4f4f0] dark:bg-[#1d1d16] border-foreground/10 border text-foreground/75 duration-300 transition-colors;
 }
 .TextClr {
-  @apply   leading-7 max-w-full text-pretty text-sm text-foreground/60;
+  @apply leading-7 max-w-full text-pretty text-sm text-foreground/60;
 }
 .chip {
   @apply bg-[#f4f4f0] dark:bg-[#1d1d16];
@@ -165,7 +165,7 @@ body {
     @apply border-border;
   }
   body {
-  @apply bg-[#f4f4f0] text-[#2b2b22] dark:bg-[#2b2b22] dark:text-[#f4f4f0];
+    @apply bg-[#f4f4f0] text-[#2b2b22] dark:bg-[#2b2b22] dark:text-[#f4f4f0];
   }
 }
 
@@ -173,7 +173,6 @@ body {
 .preloader {
   background-color: #f4f4f0;
   color: #1b2120;
-  
 }
 
 /* Dark mode */
@@ -184,12 +183,12 @@ body {
 
 /* Hide scrollbar during animations */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .shadow-chip {
@@ -219,7 +218,8 @@ body {
     inset 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

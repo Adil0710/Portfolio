@@ -10,20 +10,20 @@ export const metadata = {
   title: "Adil Patel | Fullstack Developer",
   description:
     "Explore the portfolio of Adil Patel, a dedicated full-stack developer skilled in building robust web applications. Get in touch for collaborations.",
-    keywords: [
-      "Adil Patel",
-      "Adil Patel Portfolio",
-      "Adil",
-      "Adil Portfolio",
-      "Fullstack Developer",
-      "Web Developer Portfolio",
-      "Next.js Portfolio",
-      "JavaScript Developer",
-      "MERN Stack Developer"
-    ],  
-    icons: {
-      icon: "/favicon.ico",
-    },      
+  keywords: [
+    "Adil Patel",
+    "Adil Patel Portfolio",
+    "Adil",
+    "Adil Portfolio",
+    "Fullstack Developer",
+    "Web Developer Portfolio",
+    "Next.js Portfolio",
+    "JavaScript Developer",
+    "MERN Stack Developer",
+  ],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Adil Patel | Fullstack Developer",
     description:
@@ -66,8 +66,11 @@ export default function RootLayout({
 `;
   return (
     <html lang="en">
-       <head>
-       <meta name="google-site-verification" content="RiVqt457WkYvXlAs4yq0Md3zcIEsyw8zWaiF5djt0zI" />
+      <head>
+        <meta
+          name="google-site-verification"
+          content="RiVqt457WkYvXlAs4yq0Md3zcIEsyw8zWaiF5djt0zI"
+        />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={schibstedGrotesk.className}>
@@ -81,13 +84,13 @@ export default function RootLayout({
               <div className="gradient-mask-t-0 absolute inset-0 backdrop-blur-[12px]"></div>
             </div> */}
 
-          <div className="relative min-h-screen">
-    <div className="pointer-events-none fixed inset-x-0 top-0 z-50 h-24 bg-gradient-to-b from-[#f4f4f0] dark:from-[#1D1D16] to-transparent" />
+            <div className="relative min-h-screen">
+              <div className="pointer-events-none fixed inset-x-0 top-0 z-50 h-24 bg-gradient-to-b from-[#f4f4f0] dark:from-[#1D1D16] to-transparent" />
 
-    {children}
+              {children}
 
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 h-24 bg-gradient-to-t from-[#f4f4f0] dark:from-[#1D1D16] to-transparent" />
-  </div>
+              <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 h-24 bg-gradient-to-t from-[#f4f4f0] dark:from-[#1D1D16] to-transparent" />
+            </div>
             {/* <div className="fixed inset-x-0 bottom-0 isolate z-[99] h-16">
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]"></div>
               <div className="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]"></div>

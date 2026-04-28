@@ -40,14 +40,14 @@ function Contact() {
   return (
     <motion.section
       id="contact"
-      className=" mt-12 w-[min(100%,43.5rem)] scroll-mt-16 px-5 lg:px-0 md:px-5"
+      className="  w-[min(100%,43.5rem)] scroll-mt-16 px-5 lg:px-0 md:px-5"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <SectionHeading>Contact me</SectionHeading>
-      <p className="TextClr text-sm">
+      {/* <SectionHeading>Contact me</SectionHeading> */}
+      <p className="leading-7 max-w-full text-pretty text-xs text-foreground/60 ">
         Please contact me directly at{" "}
         <a
           href={`mailto:${contactEmail}`}
@@ -59,7 +59,7 @@ function Contact() {
       </p>
 
       <form
-        className="mt-10 flex flex-col"
+        className="mt-5 flex flex-col"
         onSubmit={handleSubmit}
         ref={formRef}
       >
@@ -69,19 +69,19 @@ function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
-          className="TextClr text-sm h-14 px-4 rounded-lg border BorderAndBg focus:outline focus:outline-black/60 focus:outline-[0.1px] ring-neutral-500 dark:ring-neutral-300 focus-visible:ring-[0.1px] dark:focus:outline-black/10"
+          className="leading-7 max-w-full text-pretty text-foreground/60 text-xs h-10 px-2 rounded-lg border BorderAndBg focus:outline focus:outline-[0.1px] ring-foreground/50  focus-visible:ring-[0.1px] focus:outline-foreground/50"
         />
         <textarea
           placeholder="Your message"
           name="message"
           required
           maxLength={5000}
-          className="text-sm TextClr BorderAndBg h-52 my-3 p-4 rounded-lg resize-none focus:outline focus:outline-black/60 focus:outline-[0.1px] ring-neutral-500 dark:ring-neutral-300 focus-visible:ring-[0.1px] dark:focus:outline-black/10"
+          className="leading-7 max-w-full text-pretty text-xs text-foreground/60 BorderAndBg h-20 my-3 px-2 rounded-lg resize-none focus:outline focus:outline-foreground/50 focus:outline-[0.1px] ring-foreground/50 focus-visible:ring-[0.1px]"
         />
         <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"
-          className="group bg-[#f4f4f0] dark:bg-[#1d1d16] text-black dark:text-white w-[6rem] flex items-center justify-center gap-2 group py-1 md:text-sm text-xs"
+          className="group bg-[#f4f4f0] dark:bg-[#1d1d16] text-foreground/75 w-[5rem] flex items-center justify-center gap-2 group py-1  text-xs"
           disabled={isSubmitting} // Disable when form is pending or submitting
         >
           {isSubmitting ? (

@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <Divider/>
       <Project />
       
-      <Contact />
+      {/* <Contact /> */}
       <Toaster
         position="top-center"
         reverseOrder={false}

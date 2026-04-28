@@ -131,7 +131,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   <p className=" flex md:hidden flex-row items-center">
                     {item.company}
                   </p>
-                  <div className=" md:hidden block pl-6">
+                  <div className=" md:hidden block pl-6 ">
                     <p>{item.duration}</p>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     initial={contentInitial}
                     animate={getContentAnimate(isExpanded)}
                     transition={contentTransition}
-                    className="timeline-content md:hidden block tracking-wide"
+                    className="timeline-content md:hidden block tracking-wide mt-4"
                   >
                     {item.content}
                   </motion.div>

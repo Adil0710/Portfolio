@@ -20,7 +20,7 @@ export function WorkExperience() {
       </div>
     ),
     duration: (
-      <p className="text-foreground/60 font-normal text-sm">{item.duration}</p>
+      <p className="text-foreground/60 font-normal md:text-sm text-xs">{item.duration}</p>
     ),
     content: (
       <div>

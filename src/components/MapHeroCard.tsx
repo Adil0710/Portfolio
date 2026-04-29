@@ -80,7 +80,9 @@ export default function MapHeroCard({
         center: [60, 20],
         zoom: 2.4,
         attributionControl: false,
-        interactive: false,
+        interactive: true,
+        scrollZoom: true,
+        dragPan: true,
       });
 
       map.on("load", () => {

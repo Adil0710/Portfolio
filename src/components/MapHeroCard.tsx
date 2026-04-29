@@ -88,8 +88,8 @@ export default function MapHeroCard({
         const el = document.createElement("div");
         el.className = "relative flex items-center justify-center";
         el.innerHTML = `
-          <div class="absolute w-6 h-6 bg-gradient-to-br from-cyan-400  to-cyan-600 rounded-full opacity-30 animate-ping-slow"></div>
-          <div class="relative w-4 h-4 bg-gradient-to-br from-cyan-400  to-cyan-600 rounded-full border-1 shadow-lg shadow-blue-500/50"></div>
+          <div class="absolute w-6 h-6 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full opacity-30 animate-[ping_2s_linear_infinite]"></div>
+          <div class="relative w-4 h-4 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full border-1 border-white shadow-lg shadow-blue-500/50"></div>
         `;
 
         markerRef.current = new maplibregl.Marker({ element: el })

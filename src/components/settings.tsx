@@ -184,7 +184,7 @@ export const Settings = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
             className={cn(
-              "fixed top-5 right-5 shadow-lg flex aspect-square size-10 items-center justify-center rounded-lg bg-gradient-to-b align-middle ring-1 transition-all",
+              "shadow-lg flex aspect-square size-10 items-center justify-center rounded-lg bg-gradient-to-b align-middle ring-1 transition-all",
               "from-stone-500 to-neutral-800 ring-white/20 ring-offset-2 ring-inset dark:ring-offset-stone-600",
               "bg-stone-100 from-stone-100 to-white ring-black/10 ring-offset-stone-200 dark:bg-transparent dark:from-stone-500 dark:to-neutral-800 dark:ring-white/20",
             )}
@@ -200,7 +200,7 @@ export const Settings = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
             className={cn(
-              "fixed top-4 right-4 w-80 rounded-xl bg-gradient-to-b p-4 shadow-lg ring-1 transition-all",
+              "w-80 rounded-xl bg-gradient-to-b p-4 shadow-lg ring-1 transition-all",
               "from-stone-500 to-neutral-800 ring-white/20 ring-offset-2 ring-inset dark:ring-offset-stone-600",
               "bg-stone-100 from-stone-100 to-white ring-black/10 ring-offset-stone-200 dark:bg-transparent dark:from-stone-500 dark:to-neutral-800 dark:ring-white/20",
             )}
@@ -211,7 +211,7 @@ export const Settings = () => {
               transition={{ delay: 0.1, duration: 0.15 }}
               className="text-foreground/75 text-sm font-medium"
             >
-             <Contact/>
+              <Contact />
             </motion.div>
           </motion.div>
         )}

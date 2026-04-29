@@ -8,6 +8,7 @@ import { SocialLinks } from "./SocialLinks";
 import BlurFade from "./ui/blur-fade";
 import { XIcon } from "lucide-react";
 import { introData } from "@/lib/introData";
+import MapHeroCard from "./MapHeroCard";
 
 function Intro() {
   const [isModalOpen, setIsModalOpen] = useState(false); // Control modal visibility
@@ -31,9 +32,15 @@ function Intro() {
   }, [isModalOpen]);
 
   return (
-    <div className=" z-10 w-full flex-col sm:mt-14  mt-5">
+    <div className=" z-10 w-full flex-col ">
       <AnimatePresence>
-        <div className="md:px-0 px-5 py-4 max-w-[45rem] mx-auto relative z-10 flex items-center justify-between lg:pt-5 pt-14 md:pt-0">
+        <div className="max-w-[45rem] mx-auto px-5 md:px-0">
+          <BlurFade delay={0.02}>
+            <MapHeroCard className="w-full h-56 mt-0" />
+          </BlurFade>
+        </div>
+         
+        <div className="md:px-0 px-5 pb-4 max-w-[45rem] mx-auto relative z-10 flex items-center justify-between pt-2 ">
           <div className=" flex flex-col justify-center space-y-2 w-[60%]">
             <div className=" flex flex-row items-center md:gap-5 gap-2">
               <BlurFade delay={0.04}>

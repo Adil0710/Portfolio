@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "maplibre-gl/dist/maplibre-gl.css";
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -222,4 +224,65 @@ body {
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate3d(-10%, -10%, 0) scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translate3d(10%, 5%, 0) scale(1.03);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(-10%, -10%, 0) scale(1);
+    opacity: 0.65;
+  }
+}
+
+@keyframes plane {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-260px, -150px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes plane-shadow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+    filter: blur(0px);
+  }
+  15% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(-250px, -140px, 0) scale(0.92);
+    opacity: 0.3;
+    filter: blur(1px);
+  }
+}
+
+.animate-cloud {
+  animation: cloud 8s ease-in-out infinite;
+}
+
+.animate-plane {
+  animation: plane 2.8s ease-in-out infinite;
+}
+
+.animate-plane-shadow {
+  animation: plane-shadow 2.8s ease-in-out infinite;
+}
+
+.animate-ping-slow {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }

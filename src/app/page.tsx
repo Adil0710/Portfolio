@@ -10,7 +10,7 @@ import { useTheme } from "@/context/themeContext";
 import Project from "@/components/Project";
 import { useEffect } from "react";
 import Experience from "@/components/Experience";
-import  Education  from "@/components/Education";
+import Education from "@/components/Education";
 import { Divider } from "@/components/ui/Divider";
 import { Settings } from "@/components/settings";
 
@@ -18,18 +18,17 @@ const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <main className=" max-w-screen overflow-x-hidden flex flex-col items-center scrollbar-hide">
-      
       <Hero />
       <About />
-      <Divider/>
+      <Divider />
       <Experience />
-      <Divider/>
-      <Education/>
-      <Divider/>
+      <Divider />
+      <Education />
+      <Divider />
       <Skills />
-      <Divider/>
+      <Divider />
       <Project />
-      
+
       {/* <Contact /> */}
       <Toaster
         position="top-center"
@@ -42,7 +41,7 @@ const Home: NextPage = () => {
           },
         }}
       />
-      <Settings/>
+      <Settings />
     </main>
   );
 };

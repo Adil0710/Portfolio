@@ -11,10 +11,10 @@ function About() {
       className="mt-3 max-w-[45.3rem] z-20 scroll-mt-44 leading-8 px-5 lg:px-0 md:px-5"
       id="about"
     >
-      <BlurFade delay={0.04 * 3}>
+      <BlurFade delay={0.04 * 4}>
         <SectionHeading>{aboutData.title}</SectionHeading>
       </BlurFade>
-      <BlurFade delay={0.04 * 4}>
+      <BlurFade delay={0.04 * 5}>
         <p className="text-left TextClr mt-3 tracking-wide">
           I&apos;m a dedicated{" "}
           <span className="font-semibold underline decoration-dotted decoration-foreground/50 underline-offset-2 chipText">

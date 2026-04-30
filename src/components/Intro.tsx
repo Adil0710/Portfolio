@@ -34,44 +34,54 @@ function Intro() {
   return (
     <div className=" z-10 w-full flex-col ">
       <AnimatePresence>
-        <div className="max-w-[45rem] mx-auto px-5 md:px-0">
-          <BlurFade delay={0.02}>
+        <div className="max-w-[45rem] mx-auto px-0 md:px-0">
+          <BlurFade delay={0.04}>
             <MapHeroCard className="w-full h-56 mt-0" />
           </BlurFade>
         </div>
          
         <div className="md:px-0 px-5 pb-4 max-w-[45rem] mx-auto relative z-10 flex items-center justify-between pt-2 ">
           <div className=" flex flex-col justify-center space-y-2 w-[60%]">
-            <div className=" flex flex-row items-center md:gap-5 gap-2">
-              <BlurFade delay={0.04}>
+            <div className=" flex flex-row items-center md:gap-3 gap-2">
+              <BlurFade delay={0.06}>
                 <h1 className=" text-xl font-bold tracking-wide sm:text-2xl xl:text-3xl/none text-foreground/80">
                   Hi, I&apos;m {introData.name}{" "}
                 </h1>
               </BlurFade>
               <motion.h1
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                whileHover={{ rotate: 10 }} // Rotate on hover
-                transition={{
-                  opacity: {
-                    type: "spring",
-                    stiffness: 150,
-                    duration: 0.8,
-                    delay: 0.2,
-                  },
-                  scale: {
-                    type: "spring",
-                    stiffness: 150,
-                    duration: 0.8,
-                    delay: 0.2,
-                  },
-                }}
-                className="cursor-pointer z-20 -mt-4 text-xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none"
-              >
-                👋
-              </motion.h1>
+  initial={{ opacity: 0, scale: 0 }}
+  animate={{
+    opacity: 1,
+    scale: 1,
+    rotate: [0, 20, -5, 20, -5, 10, 0], // Natural wave sequence
+  }}
+  whileHover={{
+    rotate: [0, 30, -10, 30, -10, 5, 0],
+    scale: 1.150,
+    transition: {
+      rotate: {
+        duration: 2,
+        ease: "easeInOut",
+        // repeat: Infinity,
+        repeatDelay: 0.5,
+      },
+    },
+  }}
+  transition={{
+    opacity: { type: "spring", stiffness: 250, duration: 1, delay: 0.2 },
+    scale: { type: "spring", stiffness: 250, duration: 1, delay: 0.2 },
+    rotate: {
+      duration: 1,
+      ease: "easeInOut",
+      delay: 1, // Plays after the entrance animation settles
+    },
+  }}
+  className="cursor-pointer z-20 -mt-4 text-xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none"
+>
+  👋
+</motion.h1>
             </div>
-            <BlurFade delay={0.04}>
+            <BlurFade delay={0.06}>
               <div className="">
                 <p className=" md:text-lg text-foreground/70">
                   {" "}
@@ -93,7 +103,7 @@ function Intro() {
             </BlurFade>
           </div>
 
-          <BlurFade delay={0.04}>
+          <BlurFade delay={0.06}>
             <Image
               onClick={toggleModal}
               src={adil}

@@ -135,6 +135,8 @@ export default function MapHeroCard({
     }
   }, [currentTheme]);
 
+  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
+
   return (
     <div
       className={cn(
@@ -149,10 +151,10 @@ export default function MapHeroCard({
       <div className="absolute inset-0 pointer-events-none z-20 transition-all duration-300 group-hover:opacity-0 group-hover:[filter:blur(6px)] [filter:blur(0px)]">
         {/* Cloud - coming from right, going left slowly */}
         <motion.img
-          initial={{ x: "220%", y: "-20%" }}
+          initial={{ x: isDesktop ? "220%" : "120%", y: "-20%" }}
           animate={{ x: "-100%" }}
           transition={{
-            duration: 120,
+            duration: isDesktop ? 120 : 60,
             repeat: Infinity,
             ease: "linear",
             delay: 2,
@@ -167,13 +169,18 @@ export default function MapHeroCard({
 
         {/* Plane Shadow - trails behind and slightly below the plane */}
         <motion.img
-          initial={{ x: "-10%", y: "350%", opacity: 1, rotate: -55 }}
+          initial={{
+            x: isDesktop ? "40%" : "40%",
+            y: isDesktop ? "210%" : "250%",
+            opacity: 1,
+            rotate: -55,
+          }}
           animate={{
-            x: "-3000%",
-            y: "-900%",
+            x: isDesktop ? "-2600%" : "-1650%",
+            y: isDesktop ? "-500%" : "-550%",
           }}
           transition={{
-            duration: 30,
+            duration: isDesktop ? 30 : 20,
             repeat: Infinity,
             ease: "linear",
             delay: 3,
@@ -188,13 +195,18 @@ export default function MapHeroCard({
 
         {/* Plane - bottom right to upper left */}
         <motion.img
-          initial={{ x: "120%", y: "120%", opacity: 1, rotate: -55 }}
+          initial={{
+            x: isDesktop ? "160%" : "100%",
+            y: isDesktop ? "80%" : "100%",
+            opacity: 1,
+            rotate: -55,
+          }}
           animate={{
-            x: "-3000%",
-            y: "-400%",
+            x: isDesktop ? "-2500%" : "-1500%",
+            y: isDesktop ? "-200%" : "-200%",
           }}
           transition={{
-            duration: 30,
+            duration: isDesktop ? 30 : 20,
             repeat: Infinity,
             ease: "linear",
             delay: 3,

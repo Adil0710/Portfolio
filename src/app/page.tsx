@@ -13,14 +13,20 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import { Divider } from "@/components/ui/Divider";
 import { Settings } from "@/components/settings";
+import Signature from "@/components/Signature";
+import BlurFade from "@/components/ui/blur-fade";
 
 const Home: NextPage = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <main className=" max-w-screen overflow-x-hidden flex flex-col items-center scrollbar-hide">
       <Hero />
+      {/* <Signature/> */}
       <About />
+       <BlurFade delay={0.04 * 6}>
+
       <Divider />
+       </BlurFade>
       <Experience />
       <Divider />
       <Education />

@@ -146,16 +146,18 @@ function applySettings(font: FontOption, color: ColorOption) {
 
 export const Settings = () => {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const saved = loadSettings();
     applySettings(saved.font, saved.color);
+    setMounted(true);
   }, []);
 
   useEffect(() => {
     if (!open) return;
-    const handleClick = (e: MouseEvent) => {
+    const handlePointerDown = (e: MouseEvent | TouchEvent) => {
       if (
         containerRef.current &&
         !containerRef.current.contains(e.target as Node)
@@ -163,27 +165,39 @@ export const Settings = () => {
         setOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown, {
+      passive: true,
+    });
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+    };
   }, [open]);
 
   return (
     <div
       ref={containerRef}
-      className="fixed top-4 right-4 z-50 flex flex-col items-end"
+      className={cn(
+        "fixed top-4 right-4 z-50 flex flex-col items-end",
+        "transform-gpu will-change-opacity",
+        open ? "pointer-events-auto" : "pointer-events-none",
+      )}
+      style={{ backfaceVisibility: "hidden" }}
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="popLayout" initial={false}>
         {!open ? (
           <motion.button
             key="trigger"
             layoutId="settings-container"
             onClick={() => setOpen(true)}
             whileTap={{ scale: 0.9 }}
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
+            exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeOut" } }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             className={cn(
+              "pointer-events-auto",
               "shadow-lg flex aspect-square size-10 items-center justify-center rounded-lg bg-gradient-to-b align-middle ring-1 transition-all",
               "from-stone-500 to-neutral-800 ring-white/20 ring-offset-2 ring-inset dark:ring-offset-stone-600",
               "bg-stone-100 from-stone-100 to-white ring-black/10 ring-offset-stone-200 dark:bg-transparent dark:from-stone-500 dark:to-neutral-800 dark:ring-white/20",
@@ -195,24 +209,23 @@ export const Settings = () => {
           <motion.div
             key="panel"
             layoutId="settings-container"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
+            exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeOut" } }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             className={cn(
+              "pointer-events-auto",
+              "[transform:translateZ(0)]",
+              "will-change-opacity",
+              "overscroll-contain",
               "w-80 rounded-xl bg-gradient-to-b p-4 shadow-lg ring-1 transition-all",
               "from-stone-500 to-neutral-800 ring-white/20 ring-offset-2 ring-inset dark:ring-offset-stone-600",
               "bg-stone-100 from-stone-100 to-white ring-black/10 ring-offset-stone-200 dark:bg-transparent dark:from-stone-500 dark:to-neutral-800 dark:ring-white/20",
             )}
           >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1, duration: 0.15 }}
-              className="text-foreground/75 text-sm font-medium"
-            >
+            <div className="text-foreground/75 text-sm font-medium">
               <Contact />
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

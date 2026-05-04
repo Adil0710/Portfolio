@@ -185,17 +185,12 @@ export const Settings = () => {
       )}
       style={{ backfaceVisibility: "hidden" }}
     >
-      <AnimatePresence mode="wait" initial={false}>
         {!open ? (
           <motion.button
             key="trigger"
             layoutId="settings-container"
             onClick={() => setOpen(true)}
-            whileTap={{ scale: 0.9 }}
-            initial={mounted ? { opacity: 0 } : false}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeOut" } }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            transition={{ type: "tween", duration: 0.25, ease: "easeInOut" }}
             className={cn(
               "pointer-events-auto",
               "shadow-lg flex aspect-square size-10 items-center justify-center rounded-lg bg-gradient-to-b align-middle ring-1 transition-all",
@@ -209,10 +204,7 @@ export const Settings = () => {
           <motion.div
             key="panel"
             layoutId="settings-container"
-            initial={mounted ? { opacity: 0 } : false}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeOut" } }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            transition={{ type: "tween", duration: 0.25, ease: "easeInOut" }}
             className={cn(
               "pointer-events-auto",
               "[transform:translateZ(0)]",
@@ -228,7 +220,6 @@ export const Settings = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
     </div>
   );
 };

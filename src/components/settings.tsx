@@ -192,7 +192,7 @@ export const Settings = () => {
             layoutId="settings-container"
             onClick={() => setOpen(true)}
             whileTap={{ scale: 0.9 }}
-            initial={false}
+            initial={mounted ? { opacity: 0 } : false}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeOut" } }}
             transition={{ duration: 0.2, ease: "easeOut" }}
@@ -209,7 +209,7 @@ export const Settings = () => {
           <motion.div
             key="panel"
             layoutId="settings-container"
-            initial={false}
+            initial={mounted ? { opacity: 0 } : false}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeOut" } }}
             transition={{ duration: 0.2, ease: "easeOut" }}

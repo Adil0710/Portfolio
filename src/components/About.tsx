@@ -16,7 +16,7 @@ function About() {
       </BlurFade>
       <BlurFade delay={0.04 * 5}>
         <p className="text-left TextClr mt-3 tracking-wide">
-          I&apos;m a dedicated{" "}
+          I&apos;m a {" "}
           <span className="font-semibold underline decoration-dotted decoration-foreground/50 underline-offset-2 chipText">
             {" "}
             {aboutData.roleLabel}

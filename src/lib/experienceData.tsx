@@ -10,13 +10,10 @@ export const experienceData = [
     companyName: "NAP Works Pvt. Ltd.",
     duration: "Apr 2025 - Present",
     description: [
-      "Led end-to-end development of a full-stack inspection management platform used across construction, logistics, property, and safety industries (1,000+ active users).",
-      "Built a drag-and-drop form builder with 20+ customizable fields, validations, and conditional logic (improved inspection efficiency by 35%).",
-      "Developed scalable REST APIs for web, iOS, and Android clients (50K+ monthly requests).",
-      "Created role-based dashboards with real-time analytics and reporting to support decision-making.",
-      "Integrated AWS S3 signed URLs for secure document management.",
-      "Deployed on AWS EC2 using Docker and Nginx (99.9% uptime).",
-      "Led Stripe-to-PayPal payment migration and managed cloud infrastructure across multiple projects.",
+      "Working on an inspection management platform used in construction, logistics & safety — serving 1,000+ users with 50K+ API calls/month.",
+      "Built a drag-and-drop form builder supporting 20+ field types with validations and conditional logic — cut inspection time by ~35%.",
+      "Set up role-based dashboards, real-time analytics, and secure file uploads via AWS S3. Deployed everything with Docker + Nginx on EC2 (99.9% uptime).",
+      "Handled the Stripe-to-PayPal payment switch and manage cloud infra across projects."
     ],
   },
   {
@@ -25,11 +22,8 @@ export const experienceData = [
     companyName: "Furde Infotech Pvt. Ltd.",
     duration: "Sep 2024 - Nov 2025 ",
     description: [
-      "Built modern, responsive websites and applications with admin dashboards and job boards (improved UI/UX by 22%).",
-      "Shipped scalable web apps using React.js, Next.js, Node.js, and TypeScript.",
-      "Worked with UI libraries like Shadcn and Aceternity UI for faster delivery and consistent UI.",
-      "Integrated MongoDB-backed data workflows (reduced admin tasks by 30%).",
-      "Improved user engagement by 14% through performance and UX-focused iterations.",
+      "Built responsive apps with admin panels and job boards using React, Next.js, Node.js & TypeScript — paired with Shadcn and Aceternity UI.",
+      "Wired up MongoDB workflows that cut manual admin work by 30% and helped push engagement up by 14%.",
     ],
   },
   {
@@ -38,10 +32,8 @@ export const experienceData = [
     companyName: "MountainHigh Solutions Pvt. Ltd.",
     duration: "Feb 2024 - Jul 2024",
     description: [
-      "Developed a full-stack HR management system using Node.js, React, and MySQL.",
-      "Improved latency by 16% through performance optimizations.",
-      "Implemented leave, attendance, and payroll modules.",
-      "Reduced admin tasks by 33% and increased employee satisfaction by 25%.",
+      "Built an HR management system from scratch using Node.js, React & MySQL — covering leave, attendance and payroll.",
+      "Brought admin overhead down by 33% and shaved 16% off response times.",
     ],
   },
   {
@@ -50,9 +42,7 @@ export const experienceData = [
     companyName: "ArrowTech Technologies Pvt. Ltd.",
     duration: "Aug 2023 - Jan 2024",
     description: [
-      "Developed interactive, responsive web applications for multiple device form factors.",
-      "Enhanced UX with React and animation/scroll libraries like GSAP, Locomotive.js, and ScrollTrigger.",
-      "Boosted engagement by 38% and reduced bounce rate by 13%.",
+      "Developed interactive web apps using React with GSAP & Locomotive.js animations — engagement went up 38% and bounce rate dropped 13%.",
     ],
   },
 ];

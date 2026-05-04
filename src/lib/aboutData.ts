@@ -1,6 +1,6 @@
 export const aboutData = {
   title: "About Me",
-  roleLabel: "Full-stack developer",
+  roleLabel: "Fullstack Developer",
   experienceText:
     "with 2+ year of experience building interactive, high-performance web applications using",
   technologies: ["React", "Next.js", "Node.js", "MongoDB"],

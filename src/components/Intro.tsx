@@ -25,9 +25,19 @@ function Intro() {
   const [isHovered, setIsHovered] = useState(false);
   const [ringKey, setRingKey] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const hovRef = useRef(false);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
+
+  // Detect mobile/touch device
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   const advanceImage = useCallback(() => {
     setIsBlurring(true);
@@ -50,6 +60,37 @@ function Intro() {
     document.body.style.overflow = isModalOpen ? "hidden" : "auto";
     return () => { document.body.style.overflow = "auto"; };
   }, [isModalOpen]);
+
+  // Handlers for hover (desktop) and tap (mobile)
+  const touchStartTime = useRef(0);
+
+  const handleEnter = () => {
+    if (isMobile) return;
+    setIsHovered(true); hovRef.current = true; setRingKey((p) => p + 1);
+  };
+  const handleLeave = () => {
+    if (isMobile) return;
+    setIsHovered(false); hovRef.current = false;
+  };
+
+  // Mobile: press & hold to show ring, release to hide
+  const handleTouchStart = () => {
+    if (!isMobile) return;
+    touchStartTime.current = Date.now();
+    setIsHovered(true); hovRef.current = true; setRingKey((p) => p + 1);
+  };
+  const handleTouchEnd = () => {
+    if (!isMobile) return;
+    const held = Date.now() - touchStartTime.current;
+    setIsHovered(false); hovRef.current = false;
+    // Quick tap → open modal
+    if (held < 200) toggleModal();
+  };
+
+  const handleClick = () => {
+    if (isMobile) return; // handled by touch events
+    toggleModal();
+  };
 
   return (
     <div className=" z-10 w-full flex-col ">
@@ -115,9 +156,13 @@ function Intro() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <div
-                className="relative sm:h-40 sm:w-40 h-32 w-32 rounded-full"
-                onMouseEnter={() => { setIsHovered(true); hovRef.current = true; setRingKey((p) => p + 1); }}
-                onMouseLeave={() => { setIsHovered(false); hovRef.current = false; }}
+                className="relative sm:h-40 sm:w-40 h-32 w-32 rounded-full select-none touch-none"
+                style={{ WebkitTouchCallout: "none" }}
+                onMouseEnter={handleEnter}
+                onMouseLeave={handleLeave}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                onContextMenu={(e) => e.preventDefault()}
               >
                 {/* SVG Progress Ring */}
                 <svg className="absolute inset-0 w-full h-full -rotate-90 z-20 pointer-events-none" viewBox="0 0 100 100" overflow="visible">
@@ -166,7 +211,7 @@ function Intro() {
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                   >
                     <Image
-                      onClick={toggleModal}
+                      onClick={handleClick}
                       src={slideImages[imgIdx]}
                       alt="adil"
                       priority={true}
@@ -174,6 +219,7 @@ function Intro() {
                       height={192}
                       quality={95}
                       placeholder="blur"
+                      draggable={false}
                       className="sm:h-40 sm:w-40 cursor-pointer h-32 w-32 rounded-full object-cover z-10"
                     />
                   </motion.div>

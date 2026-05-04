@@ -185,7 +185,7 @@ export const Settings = () => {
       )}
       style={{ backfaceVisibility: "hidden" }}
     >
-      <AnimatePresence mode="popLayout" initial={false}>
+      <AnimatePresence mode="wait" initial={false}>
         {!open ? (
           <motion.button
             key="trigger"

@@ -190,7 +190,7 @@ export const Settings = () => {
             key="trigger"
             layoutId="settings-container"
             onClick={() => setOpen(true)}
-            transition={{ type: "tween", duration: 0.25, ease: "easeInOut" }}
+           transition={{ type: "spring", stiffness:250, duration: 0.15, ease: "easeInOut" }}
             className={cn(
               "pointer-events-auto",
               "shadow-lg flex aspect-square size-10 items-center justify-center rounded-lg bg-gradient-to-b align-middle ring-1 transition-all",
@@ -204,7 +204,7 @@ export const Settings = () => {
           <motion.div
             key="panel"
             layoutId="settings-container"
-            transition={{ type: "tween", duration: 0.25, ease: "easeInOut" }}
+            transition={{ type: "spring", stiffness:250, duration: 0.3, ease: "easeInOut" }}
             className={cn(
               "pointer-events-auto",
               "[transform:translateZ(0)]",

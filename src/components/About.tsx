@@ -72,6 +72,7 @@ function About() {
           <span className="font-semibold underline decoration-dotted decoration-foreground/50 underline-offset-2 chipText">
             {aboutData.backEndLabel}
           </span>{" "}
+          {aboutData.closingSpecializationtext}{" "}
           <br />
           <span className="mt-3 inline-block"> {aboutData.closingText}</span>
         </p>

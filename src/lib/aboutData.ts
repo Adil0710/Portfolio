@@ -8,6 +8,7 @@ export const aboutData = {
     "I specialize in creating efficient, user-friendly solutions and have expertise in both",
   frontEndLabel: "Frontend",
   backEndLabel: "Backend",
+  closingSpecializationtext:"development.",
   closingText:
-    "development. I enjoy sharing my knowledge through teaching and mentoring others in tech. When I'm not coding, I love playing video games.",
+    "I enjoy sharing my knowledge through teaching and mentoring others in tech. When I'm not coding, I love playing video games.",
 };
